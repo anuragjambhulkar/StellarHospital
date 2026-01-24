@@ -1,0 +1,985 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Stellar Health</title>
+</head>
+	
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Health</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+
+<script>
+    function toggleMenu() {
+        const topBarLinks = document.querySelector('.top-bar .left-links');
+        const hamburger = document.querySelector('.hamburger');
+        const isActive = topBarLinks.style.display === 'flex';
+        topBarLinks.style.display = isActive ? 'none' : 'flex';
+        hamburger.classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+        const dropdownContent = event.target.nextElementSibling;
+        const isActive = dropdownContent.style.display === 'block';
+        dropdownContent.style.display = isActive ? 'none' : 'block';
+        const arrow = event.target.querySelector('.arrow') || event.target.parentElement.querySelector('.arrow');
+        if (arrow) {
+            arrow.textContent = isActive ? 'keyboard_arrow_down' : 'keyboard_arrow_up';
+        }
+        event.stopPropagation();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropBtns = document.querySelectorAll('.dropbtn');
+
+        dropBtns.forEach(dropBtn => {
+            dropBtn.addEventListener('click', function(event) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    if (content !== dropBtn.nextElementSibling) {
+                        content.style.display = 'none';
+                        const arrow = content.previousElementSibling.querySelector('.arrow');
+                        if (arrow) {
+                            arrow.textContent = 'keyboard_arrow_down';
+                        }
+                    }
+                });
+                toggleDropdown(event);
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            document.querySelectorAll('.dropdown-content').forEach(content => {
+                if (!event.target.closest('.dropdown-content') && !event.target.closest('.dropbtn')) {
+                    content.style.display = 'none';
+                    const arrow = content.previousElementSibling.querySelector('.arrow');
+                    if (arrow) {
+                        arrow.textContent = 'keyboard_arrow_down';
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            
+        <div class="left-part">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/stellar-health-nagpur-india.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div class="middle-part">
+        <div class="search-container">
+  <input type="text" placeholder="Search for doctor or treatment" class="searchbox" name="search" id="search">
+  <button class="search-button">
+    <i class="material-symbols-outlined">search</i>
+  </button>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+
+    </div>
+
+       <div class="right-part">
+    <span class="helpline">
+        <i class="material-symbols-outlined">phone_in_talk</i>
+        <div class="helpline-container">
+            <span class="small-text">24x7 Helpline</span><br>
+            <span class="big-text">1800 5533 3355</span>
+        </div>
+    </span>
+</div>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+    </div>
+ 
+        <div class="top-bar">
+            <div class="left-links">
+                <a href="stellar-story.html">The Stellar Story</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				<a href="doctors.html">Our Doctors</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+                <a href="facilities.html">Our Facilities</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				<a href="services.html">Our Services</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				
+               
+                
+                <a href="health-packages.html">Health Packages</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                <a href="emergency-care.html">Emergency care</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            </div>
+            <div class="right-link">
+                <a href="book-an-appointment.html">
+                    Book an Appointment
+                    <span class="material-symbols-outlined">trending_flat</span>
+                </a>
+            </div>
+        </div>
+		
+		<section class="mobile-search-helpline">
+       <div class="search-container">
+    <input type="text" placeholder="Search for doctor or treatment" class="searchbox" style="font-size: 0.55rem;" name="search" id="search-small">
+    <button class="search-button">
+        <i class="material-symbols-outlined">search</i>
+    </button>
+    <div id="search-results-small" class="search-results"></div>
+</div>
+			
+			<style>
+@media (min-width: 551px) {
+    .searchbox {
+        font-size: 0.7rem !important; /* Adjust the font size as needed */
+    }
+}
+
+@media (max-width: 550px) {
+    .searchbox {
+        font-size: 0.6rem !important; /* Adjust the font size as needed */
+    }
+}
+</style>
+
+        <span class="helpline">
+            <i class="material-symbols-outlined">phone_in_talk</i>
+            <div class="helpline-container">
+                <span class="small-text">24x7 Helpline</span><br>
+                <span class="big-text">1800 5533 3355</span>
+            </div>
+        </span>
+    </section>
+    
+			
+    </header>
+	
+	<main>
+		
+	<section class="custom-section">
+  <!-- Left Column -->
+  <div class="left-column">
+    <!-- Top image (adjust height as needed, e.g., using a fixed value or aspect ratio) -->
+    <img src="assets/ct-scan-facility-stellar-health.png" alt="Section Image" class="left-image">
+    
+    <!-- Pill-shaped caption text -->
+    <div class="caption">WELCOME TO STELLAR HEALTH</div>
+    
+    <!-- Heading -->
+    <h2 class="heading">Medical Imaging &amp; Intervention
+in an Oasis of Wellness</h2>
+    
+    <!-- Paragraph -->
+    <p class="description">
+      At Stellar, we combine advanced medical imaging and precise interventions with a serene, patient-centered environment designed to promote healing and comfort. Our state-of-the-art technology ensures accurate diagnostics and effective treatments. Every patient's care journey is thoughtfully personalized, blending cutting‑edge innovation with genuine compassion to foster lasting wellness.
+    </p>
+    
+    <!-- Button -->
+    <button class="cta-button">MORE INFO</button>
+  </div>
+  
+  <!-- Right Column -->
+  <div class="right-column">
+    <div class="slider">
+      <!-- Slider / Banner image -->
+      <img src="assets/kidney-stone-treatment-facility.png" alt="Banner Image" class="banner-image">
+      
+      <!-- Arrow controls in the bottom-left corner -->
+      <div class="slider-controls">
+  <button class="prev">
+    <span class="material-symbols-outlined">trending_flat</span>
+  </button>
+  <button class="next">
+    <span class="material-symbols-outlined">trending_flat</span>
+  </button>
+</div>
+    </div>
+  </div>
+</section>
+	
+		
+<section class="stats-section">
+  <!-- Column 1 -->
+  <div class="stat">
+    <div class="number">10k+</div>
+    <div class="topic">Patients Cured So Far</div>
+    <p class="description">Our highly experienced team has successfully treated thousands of cases.</p>
+  </div>
+  
+  <!-- Column 2 -->
+  <div class="stat">
+    <div class="number">500+</div>
+    <div class="topic">Doctors Onboard</div>
+    <p class="description">An expert panel of physicians ready to care for you every day and night.</p>
+  </div>
+  
+  <!-- Column 3 -->
+  <div class="stat">
+    <div class="number">24/7</div>
+    <div class="topic">Emergency Services</div>
+    <p class="description">Round-the-clock care designed to respond swiftly to emergencies.</p>
+  </div>
+  
+  <!-- Column 4 -->
+  <div class="stat">
+    <div class="number">98%</div>
+    <div class="topic">Satisfaction Rate</div>
+    <p class="description">Patient testimonials speak of our highly compassionate care.</p>
+  </div>
+</section>
+		
+		
+		
+<section class="content-section-2">
+        <div class="left-side-2">
+            
+            <h1 class="headline-2">Specialized medical and diagnostic centers,
+delivering ultra advanced care.</h1>
+        </div>
+        <div class="right-side-2">
+            <p class="paragraph-2">At Stellar Health, we bring together a network of dedicated medical centers 
+designed to address diverse healthcare needs with precision and expertise.
+Our specialized centers ensure patients receive tailored, high-quality care.</p>
+        </div>
+    </section>	
+	
+	<section class="carousel-section">
+    <div class="carousel-container">
+      <!-- Previous Button -->
+      <button class="carousel-nav prev"><span class="material-symbols-outlined left-icon">trending_flat</span></button>
+      
+      <!-- Carousel Wrapper -->
+      <div class="carousel-wrapper">
+        <!-- Tile 1 -->
+        <div class="carousel-tile">
+          <h2 class="tile-heading">Brain Health Centre</h2>
+          <p class="tile-subheading">Monday-Thursday (09:00AM - 05:00PM)</p>
+          <div class="tile-tags">
+            <span class="tag">HEADACHE DISORDERS</span>
+            <span class="tag">MEMORY ISSUES</span>
+            <span class="tag">DEMENTIAS</span>
+            <span class="tag">MINDFULNESS</span>
+          </div>
+          <p class="tile-description">
+            At Stellar Brain Health Centre, we help you navigate a range of neurological and neurosurgical issues with expert care.
+          </p>
+          <img src="assets/brain-health-center-stellar-health.png" alt="Brain Health" class="tile-image">
+          <button class="tile-button">KNOW MORE</button>
+        </div>
+        
+        <!-- Tile 2 -->
+        <div class="carousel-tile">
+          <h2 class="tile-heading">Cardiology Clinic</h2>
+          <p class="tile-subheading">Open Daily (08:00AM - 08:00PM)</p>
+          <div class="tile-tags">
+            <span class="tag">HEART CARE</span>
+            <span class="tag">ECG</span>
+            <span class="tag">ARREST PREVENTION</span>
+            <span class="tag">CIRCULATION</span>
+          </div>
+          <p class="tile-description">
+            Our experts use cutting-edge technology to ensure your heart stays healthy, offering compassionate service every day.
+          </p>
+          <img src="assets/strokes-center-stellar-hospital.png" alt="Cardiology" class="tile-image">
+          <button class="tile-button">KNOW MORE</button>
+        </div>
+        
+        <!-- Tile 3 -->
+        <div class="carousel-tile">
+          <h2 class="tile-heading">Dental Care Unit</h2>
+          <p class="tile-subheading">Tuesday-Saturday (10:00AM - 06:00PM)</p>
+          <div class="tile-tags">
+            <span class="tag">ORTHODONTICS</span>
+            <span class="tag">COSMETIC DENTISTRY</span>
+            <span class="tag">IMPLANTS</span>
+            <span class="tag">CLEANSING</span>
+          </div>
+          <p class="tile-description">
+            Our clinic offers advanced treatments and gentle care to keep your smile bright and healthy.
+          </p>
+          <img src="assets/dental-care-center-stellar-hospital.png" alt="Dental Care" class="tile-image">
+          <button class="tile-button">KNOW MORE</button>
+        </div>
+        
+        <!-- Tile 4 -->
+        <div class="carousel-tile">
+          <h2 class="tile-heading">Orthopedic Center</h2>
+          <p class="tile-subheading">Monday-Friday (09:00AM - 05:00PM)</p>
+          <div class="tile-tags">
+            <span class="tag">BONE HEALTH</span>
+            <span class="tag">JOINT CARE</span>
+            <span class="tag">REHABILITATION</span>
+            <span class="tag">SURGERY</span>
+          </div>
+          <p class="tile-description">
+            Specializing in efficient joint and bone care with modern techniques, we ensure fast recovery and mobility.
+          </p>
+          <img src="assets/lung-care-unit-stellar-hospital.png" alt="Orthopedic" class="tile-image">
+          <button class="tile-button">KNOW MORE</button>
+        </div>
+        
+        <!-- Tile 5 -->
+        <div class="carousel-tile">
+          <h2 class="tile-heading">Dermatology Clinic</h2>
+          <p class="tile-subheading">By Appointment Only</p>
+          <div class="tile-tags">
+            <span class="tag">SKIN CARE</span>
+            <span class="tag">ACNE TREATMENT</span>
+            <span class="tag">LASER THERAPY</span>
+            <span class="tag">COSMETOLOGY</span>
+          </div>
+          <p class="tile-description">
+            Discover the latest treatments to rejuvenate your skin with personalized care for all skin types.
+          </p>
+          <img src="assets/dermatology-center-stellar-health-hospital.png" alt="Dermatology" class="tile-image">
+          <button class="tile-button">KNOW MORE</button>
+        </div>
+        
+        <!-- Tile 6 -->
+        <div class="carousel-tile">
+          <h2 class="tile-heading">Pediatric Care</h2>
+          <p class="tile-subheading">Open 7 Days</p>
+          <div class="tile-tags">
+            <span class="tag">CHILD CARE</span>
+            <span class="tag">IMMUNIZATION</span>
+            <span class="tag">WELLNESS</span>
+            <span class="tag">NUTRITION</span>
+          </div>
+          <p class="tile-description">
+            Our pediatric care unit is dedicated to ensuring the health and happiness of your little ones with expert attention.
+          </p>
+          <img src="assets/pediatric-care-stellar-health-hospital.png" alt="Pediatric Care" class="tile-image">
+          <button class="tile-button">KNOW MORE</button>
+        </div>
+      </div>
+      
+      <!-- Next Button -->
+      <button class="carousel-nav next"><span class="material-symbols-outlined">trending_flat</span></button>
+    </div>
+  </section>	
+		
+		
+		
+	 <!-- USP SECTION-->	
+		
+		
+	<section class="usp-section usp-two-column-section">
+    <!-- Left Column -->
+    <div class="usp-left-col">
+      <!-- Pill-Shaped Caption -->
+      <span class="usp-caption-pill">YOUR PARTNERS IN GOOD HEALTH</span>
+      <!-- Heading -->
+      <h2 class="usp-section-heading">Comprehensive integrative
+&AMP; compassionate care</h2>
+      <!-- Pointers List -->
+      <div class="usp-pointers-list">
+        <div class="usp-pointer-item">
+          <span class="usp-pointer-icon material-symbols-rounded">
+health_and_safety
+</span>
+          <span>NABH &amp; NABL
+Accredited Facility</span>
+        </div>
+        <div class="usp-pointer-item">
+          <span class="usp-pointer-icon material-symbols-rounded">
+personal_injury
+</span>
+          <span>Always Patient
+Safety First</span>
+        </div>
+        <div class="usp-pointer-item">
+          <span class="usp-pointer-icon material-symbols-rounded">
+medical_services
+</span>
+          <span>Comprehensive
+Medical Services</span>
+        </div>
+        <div class="usp-pointer-item">
+          <span class="usp-pointer-icon material-symbols-rounded">
+stethoscope
+</span>
+          <span>Highly Qualified
+Specialists</span>
+        </div>
+        <div class="usp-pointer-item">
+          <span class="usp-pointer-icon material-symbols-rounded">
+monitor_heart
+</span>
+          <span>State-of-the-art Facilities</span>
+        </div>
+      </div>
+      <!-- Paragraph -->
+      <p class="usp-paragraph">
+        The Institute for Specialized Medicine and Intervention, Stellar, is a health-care institute based on care, dignity and hope. Our Mission is to restore and preserve our patients’ peace of mind and dignity by offering compassionate and accountable state of the art medical care. We combine advanced medical expertise with a patient-centered approach to ensure personalized treatment and holistic healing. At Stellar, we are committed to building trust and fostering hope through every step of the healthcare journey.
+
+Building on our legacy of excellence, our dedicated team embraces the latest research and breakthrough technologies to deliver care that adapts to the evolving needs of our patients. We empower each individual with comprehensive support and tailor-made treatment plans designed to nurture both body and spirit. Our multidisciplinary approach brings together experts from a wide range of specialties to address every facet of health and well-being.
+      </p>
+      <!-- Left-Aligned Button -->
+      <button class="usp-section-button">LEARN MORE</button>
+    </div>
+    
+    <!-- Right Column -->
+    <div class="usp-right-col">
+      <img src="assets/super-speciality-hospital-stellar-health.png" alt="Service Image" class="usp-full-image" />
+    </div>
+  </section>	
+		
+		
+	<section id="content-reviews">
+    <div class="left-reviews">
+        <h1 class="headline-reviews">Hear from our patients:
+Stories of healing, compassion, and exceptional care.
+</h1>
+    </div>
+    <div class="right-reviews">
+        <p class="paragraph-reviews">At Stellar, every patient’s journey matters. Their heartfelt experiences reflect 
+our commitment to providing compassionate, and advanced medical care.
+Discover how we’ve made a difference in their lives.</p>
+    </div>
+</section>
+	
+		
+		
+		<section class="testimonial-carousel-section">
+    <div class="testimonial-carousel-container">
+      <!-- Previous Button -->
+      <button class="testimonial-carousel-nav prev">
+        <span class="material-symbols-outlined left-icon">trending_flat</span>
+      </button>
+  
+      <!-- Outer Container (allows vertical overflow) -->
+      <div class="testimonial-carousel-outer">
+        <!-- Carousel Wrapper (horizontal scrolling) -->
+        <div class="testimonial-carousel-wrapper">
+          <!-- Testimonial Tile 1 -->
+          <div class="testimonial-tile">
+            <img src="assets/harpreet-nahar-stellar-health-patient.png" alt="Patient" class="testimonial-image">
+            <p class="testimonial-text">
+              "Stellar truly lives up to its name. The doctors
+              and staff were incredibly compassionate and
+              attentive throughout my treatment. I cannot
+              thank the team enough for restoring my health
+              and peace of mind."
+            </p>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <span class="testimonial-name">Harpreet Nahar</span><br>
+                <span class="testimonial-address">Nagpur</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Tile 2 -->
+          <div class="testimonial-tile">
+            <img src="assets/anita-choudhary-stellar-health-patient.png" alt="Patient" class="testimonial-image">
+            <p class="testimonial-text">
+              "The state-of-the-art facilities at Stellar are
+outstanding. From advanced diagnostics to
+personalized care, everything exceeded my
+expectations. Made my experience seamless
+and reassuring."
+            </p>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <span class="testimonial-name">Anita Choudhary</span><br>
+                <span class="testimonial-address">Old Pune</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Tile 3 -->
+          <div class="testimonial-tile">
+            <img src="assets/meenal-more-stellar-health-patient.png" alt="Patient" class="testimonial-image">
+            <p class="testimonial-text">
+              "I am so grateful for the exceptional treatment
+I received. The doctors are knowledgeable,
+approachable, and dedicated to their
+patients' well-being. From consultation to
+recovery, I felt cared for at every stage."
+            </p>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <span class="testimonial-name">Meenal More</span><br>
+                <span class="testimonial-address">Nagpur</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Tile 4 -->
+          <div class="testimonial-tile">
+            <img src="assets/natasha-sanjolkar-stellar-health-patient.png" alt="Patient" class="testimonial-image">
+            <p class="testimonial-text">
+              "I was impressed by the care and attention I received. Every step of my treatment was explained clearly, and the compassionate staff went above and beyond to ensure my comfort and recovery."
+            </p>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <span class="testimonial-name">Natasha Sanjolkar</span><br>
+                <span class="testimonial-address">Nashik</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Tile 5 -->
+          <div class="testimonial-tile">
+            <img src="assets/kalpesh-nigam-stellar-health-patient.png" alt="Patient" class="testimonial-image">
+            <p class="testimonial-text">
+              "This hospital truly changed my life. The team’s professionalism and personable approach made me feel supported from my first consultation through my full recovery. I couldn’t be more grateful."
+            </p>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <span class="testimonial-name">Kalpesh Nigam</span><br>
+                <span class="testimonial-address">Bangalore</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial Tile 6 -->
+          <div class="testimonial-tile">
+            <img src="assets/dasna-malvekar-stellar-health-patient.png" alt="Patient" class="testimonial-image">
+            <p class="testimonial-text">
+              "An outstanding experience from start to finish. The doctors are not only highly skilled but also incredibly caring. Their commitment to my wellbeing was evident at every stage of my treatment."
+            </p>
+            <div class="testimonial-footer">
+              <div class="testimonial-info">
+                <span class="testimonial-name">Dasna Malvekar</span><br>
+                <span class="testimonial-address">Solapur</span>
+              </div>
+              <div class="testimonial-rating">
+                <span class="star">★★★★★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Next Button -->
+      <button class="testimonial-carousel-nav next">
+        <span class="material-symbols-outlined">trending_flat</span>
+      </button>
+    </div>
+  </section>
+		
+	
+		<section class="ctn-section ctn-two-col-section">
+  <!-- Left Column: Contact Info -->
+  <div class="ctn-left-col">
+    <span class="ctn-caption-pill">GET IN TOUCH</span>
+    <h2 class="ctn-heading">We're here to help you on
+your healthcare journey</h2>
+    <p class="ctn-paragraph">
+      At Stellar, we are dedicated to providing care, dignity, and hope
+at every step of your healthcare journey. Whether you have questions,
+need assistance, or want to schedule an appointment, our team is
+ready to support you. Reach out to us today, and let us guide you
+toward healing and wellness.
+    </p>
+    <!-- Google Map Embed for 30, Gurudev Nagar, Nanaganwan, Nagpur -->
+    <iframe 
+  class="responsive-map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14886.325390824084!2d79.10308023940313!3d21.12925070074007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c759f99c09c9%3A0x6e1aa815461d286d!2s30%2C%20Gurudev%20Nagar%2C%20Bapu%20Nagar%2C%20Nandanvan%2C%20Nagpur%2C%20Maharashtra%20440024%2C%20India!5e0!3m2!1sen!2sus!4v1741178181333!5m2!1sen!2sus" 
+  height="auto" 
+  style="border: 2px solid #103153; border-radius: 15px; background-color: rgba(255,255,255,0.44);" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+
+
+    <button class="ctn-btn">GET DIRECTIONS </button>&nbsp; <button class="ctn-btn">BOOK AN APPOINTMENT </button>
+  </div>
+  
+  <!-- Right Column: Contact Form -->
+  <div class="ctn-right-col">
+    <form class="ctn-form" action="send_email.php" method="post">
+      <div class="ctn-form-group">
+        <label for="ctn-name">Name</label>
+        <input type="text" id="ctn-name" name="ctn-name" placeholder="Your Name" required>
+      </div>
+      <div class="ctn-form-group">
+        <label for="ctn-email">Email</label>
+        <input type="email" id="ctn-email" name="ctn-email" placeholder="Your Email" required>
+      </div>
+      <div class="ctn-form-group">
+        <label for="ctn-message">Message</label>
+        <textarea id="ctn-message" name="ctn-message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <!-- The CSRF token will be dynamically populated -->
+      <input type="hidden" name="csrf_token" id="csrf_token" value="">
+      <button type="submit" class="ctn-submit-btn">SEND MESSAGE</button>
+    </form>
+  </div>
+
+
+</section>
+
+		
+		
+		
+</main>
+
+	
+  <section id="address-bar-section">
+    <div class="address-bar-container">
+      <div class="address-bar-left">
+        <h3 class="address-bar-title">STELLAR HEALTH</h3>
+        <p class="address-bar-description">
+          Where modern care meets compassion, blending technology with human touch.
+        </p>
+      </div>
+      <div class="address-bar-right">
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Hospital Address:</h4>
+          <address>
+            30, Gurudev Nagar,<br>
+            Nandanwan, Nagpur,<br>
+            Maharashtra, India.
+          </address>
+        </div>
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Contact Details:</h4>
+          <address>
+            Email: info@stellarhospital.com<br>
+            Local: 1-514-700-0663<br>
+            Toll-Free: 1-833-213-6353
+          </address>
+        </div>
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Hospital Timings:</h4>
+          <address>
+            Weekdays:  8:00 a.m. – 8:00 p.m.<br>
+            Saturdays:  9:00 a.m. – 2:00 p.m.<br>
+            Sundays:  Closed
+          </address>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+	
+	<footer>
+  <div class="footer-main">
+    <!-- Navigation on left -->
+    <nav class="footer-nav-links">
+      <a href="index.html" class="active">About Stellar Hospital</a>
+		
+		
+      <a href="about-us.html">Facilities</a>
+      <a href="factory.html">Health Packages</a>
+      <a href="network.html">Emergency Care</a>
+      <a href="quality.html">Download App</a>
+      <a href="certifications.html">Contact Us</a>
+		
+    </nav>
+
+    <!-- Hamburger icon for mobile (will only show on screens <900px) -->
+    <div class="footer-hamburger" onclick="toggleFooterMenu()"></div>
+
+    <!-- Logo on right -->
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="assets/stellar-health-nagpur.png" alt="Logo">
+      </a>
+    </div>
+  </div>
+	
+	<div class="footer-bar">
+			
+    <div class="footer-left">Copyright © 2025</div>
+    <div class="footer-right">All rights reserved by Stellar Health</div>
+  </div>	
+		
+		
+		
+		
+</footer>
+	
+	
+
+	<script>
+  function toggleFooterMenu() {
+    const footerNav = document.querySelector('.footer-nav-links');
+    const footerHamburger = document.querySelector('.footer-hamburger');
+    // Toggle between 'flex' and 'none'
+    const isActive = footerNav.style.display === 'flex';
+    footerNav.style.display = isActive ? 'none' : 'flex';
+    footerHamburger.classList.toggle('active');
+  }
+</script>
+	
+	
+	<script>
+    // Select DOM elements
+    const nextBtn = document.querySelector('.carousel-nav.next');
+    const prevBtn = document.querySelector('.carousel-nav.prev');
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+    // Navigate to the next "page" of tiles
+    nextBtn.addEventListener('click', () => {
+      carouselWrapper.scrollBy({ left: carouselWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Navigate to the previous "page" of tiles
+    prevBtn.addEventListener('click', () => {
+      carouselWrapper.scrollBy({ left: -carouselWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Optional: Enable mouse drag / touch swipe support for desktop
+    let isDown = false;
+    let startX;
+    
+    carouselWrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - carouselWrapper.offsetLeft;
+      carouselWrapper.style.cursor = 'grabbing';
+    });
+
+    carouselWrapper.addEventListener('mouseup', () => {
+      isDown = false;
+      carouselWrapper.style.cursor = 'grab';
+    });
+
+    carouselWrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    carouselWrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carouselWrapper.offsetLeft;
+      const walk = startX - x;
+      carouselWrapper.scrollLeft += walk;
+    });
+
+    // Touch events for mobile
+    carouselWrapper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX;
+    });
+    carouselWrapper.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX;
+      const walk = startX - x;
+      carouselWrapper.scrollLeft += walk;
+      startX = x;
+    });
+  </script>
+	
+	
+	
+	
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select DOM elements for Testimonials Carousel
+    const nextTestimonialBtn = document.querySelector('.testimonial-carousel-nav.next');
+    const prevTestimonialBtn = document.querySelector('.testimonial-carousel-nav.prev');
+    const testimonialWrapper = document.querySelector('.testimonial-carousel-wrapper');
+
+    // Navigate to the next set of testimonials
+    nextTestimonialBtn.addEventListener('click', () => {
+      testimonialWrapper.scrollBy({ left: testimonialWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Navigate to the previous set of testimonials
+    prevTestimonialBtn.addEventListener('click', () => {
+      testimonialWrapper.scrollBy({ left: -testimonialWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Enable mouse drag (desktop)
+    let isDown = false;
+    let startX;
+
+    testimonialWrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - testimonialWrapper.offsetLeft;
+      testimonialWrapper.style.cursor = 'grabbing';
+    });
+
+    testimonialWrapper.addEventListener('mouseup', () => {
+      isDown = false;
+      testimonialWrapper.style.cursor = 'grab';
+    });
+
+    testimonialWrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    testimonialWrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - testimonialWrapper.offsetLeft;
+      const walk = startX - x;
+      testimonialWrapper.scrollLeft += walk;
+    });
+
+    // Touch events for mobile swiping
+    testimonialWrapper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX;
+    });
+
+    testimonialWrapper.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX;
+      const walk = startX - x;
+      testimonialWrapper.scrollLeft += walk;
+      startX = x;
+    });
+  });
+</script>
+
+	
+	
+	
+	<script>
+	// List of predefined pages with their titles and URLs
+const pages = [
+  { title: "Dr. Nishant S Deshpande - Nephrology", url: "doctor-nishant-nephrology.html" },
+  { title: "Dr. Nitin Shinde - Infectious Diseases & Internal Medicine   ", url: "doctor-nitin-infectious-diseases.html" },
+  { title: "General Surgery", url: "general-surgery.html" },
+  { title: "Physical Therapy", url: "physical-therapy.html" }, 
+	{ title: "Dr. Tushar Patil - Neurology", url: "doctor-tushar-neurology.html" },
+  { title: "Dr. Rashmi Shinde - Obstetric Medicine , Gynecology  and IVF   ", url: "doctor-rashmi-gynecologist.html" },
+	
+  // Add more pages here
+];
+
+function performSearch(searchId, resultsId) {
+  const searchElement = document.getElementById(searchId);
+  const resultsContainer = document.getElementById(resultsId);
+  
+  searchElement.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    resultsContainer.innerHTML = '';
+
+    // Only perform the search if there is an input value
+    if (searchTerm.trim() !== '') {
+      const results = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
+      
+      if (results.length) {
+        results.forEach(result => {
+          const resultItem = document.createElement('div');
+          resultItem.classList.add('search-result-item');
+          resultItem.innerHTML = `<a href="${result.url}">${result.title}</a>`;
+          resultsContainer.appendChild(resultItem);
+        });
+      } else {
+        const noResults = document.createElement('div');
+        noResults.classList.add('search-result-item', 'no-results');
+        noResults.innerText = 'No results found';
+        resultsContainer.appendChild(noResults);
+      }
+    }
+  });
+}
+
+// Calling performSearch for both search boxes
+performSearch('search', 'search-results');
+performSearch('search-small', 'search-results-small');
+
+
+</script>
+	
+	
+	
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Array of all banner image URLs
+  const sliderImages = [
+    "assets/kidney-stone-treatment-facility.png",
+      "assets/dental-care-at-stellar-health.jpg",    // Replace with your second image URL
+      "assets/eye-clinic-stellar-health.jpg",
+      "assets/full-body-checkup-stellar-health.jpg"
+  ];
+
+  // Preload all images to help with load consistency
+  sliderImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  let currentIndex = 0;
+  
+  // Get reference to the slider image element and navigation buttons
+  const sliderImageElem = document.querySelector('.banner-image');
+  const prevBtn = document.querySelector('.slider-controls button.prev');
+  const nextBtn = document.querySelector('.slider-controls button.next');
+
+  // Function to update the displayed image
+  function updateSlider() {
+    sliderImageElem.src = sliderImages[currentIndex];
+  }
+
+  // Next button event
+  nextBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % sliderImages.length;
+    updateSlider();
+  });
+
+  // Prev button event
+  prevBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + sliderImages.length) % sliderImages.length;
+    updateSlider();
+  });
+
+  // Optional: Autoplay every 5 seconds
+  setInterval(function () {
+    currentIndex = (currentIndex + 1) % sliderImages.length;
+    updateSlider();
+  }, 2000);
+
+  // Initialize the slider with the first image
+  updateSlider();
+});
+
+</script>
+	
+	  <script>
+    fetch('token.php')
+      .then(response => response.text())
+      .then(token => {
+          document.getElementById('csrf_token').value = token;
+      })
+      .catch(error => console.error('Error fetching CSRF token:', error));
+  </script>
+
+	
+	
+	
+</body>
+</html>
+
+</body>
+</html>

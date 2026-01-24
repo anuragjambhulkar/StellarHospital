@@ -1,0 +1,1244 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Our Doctors - Stellar Health</title>
+</head>
+	
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - Stellar Health</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+
+<script>
+    function toggleMenu() {
+        const topBarLinks = document.querySelector('.top-bar .left-links');
+        const hamburger = document.querySelector('.hamburger');
+        const isActive = topBarLinks.style.display === 'flex';
+        topBarLinks.style.display = isActive ? 'none' : 'flex';
+        hamburger.classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+        const dropdownContent = event.target.nextElementSibling;
+        const isActive = dropdownContent.style.display === 'block';
+        dropdownContent.style.display = isActive ? 'none' : 'block';
+        const arrow = event.target.querySelector('.arrow') || event.target.parentElement.querySelector('.arrow');
+        if (arrow) {
+            arrow.textContent = isActive ? 'keyboard_arrow_down' : 'keyboard_arrow_up';
+        }
+        event.stopPropagation();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropBtns = document.querySelectorAll('.dropbtn');
+
+        dropBtns.forEach(dropBtn => {
+            dropBtn.addEventListener('click', function(event) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    if (content !== dropBtn.nextElementSibling) {
+                        content.style.display = 'none';
+                        const arrow = content.previousElementSibling.querySelector('.arrow');
+                        if (arrow) {
+                            arrow.textContent = 'keyboard_arrow_down';
+                        }
+                    }
+                });
+                toggleDropdown(event);
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            document.querySelectorAll('.dropdown-content').forEach(content => {
+                if (!event.target.closest('.dropdown-content') && !event.target.closest('.dropbtn')) {
+                    content.style.display = 'none';
+                    const arrow = content.previousElementSibling.querySelector('.arrow');
+                    if (arrow) {
+                        arrow.textContent = 'keyboard_arrow_down';
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            
+        <div class="left-part">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/stellar-health-nagpur-india.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div class="middle-part">
+        <div class="search-container">
+  <input type="text" placeholder="Search for doctor or treatment" class="searchbox" name="search" id="search">
+  <button class="search-button">
+    <i class="material-symbols-outlined">search</i>
+  </button>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+
+    </div>
+
+       <div class="right-part">
+    <span class="helpline">
+        <i class="material-symbols-outlined">phone_in_talk</i>
+        <div class="helpline-container">
+            <span class="small-text">24x7 Helpline</span><br>
+            <span class="big-text">1800 5533 3355</span>
+        </div>
+    </span>
+</div>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+    </div>
+ 
+        <div class="top-bar">
+            <div class="left-links">
+                <a href="stellar-story.html">The Stellar Story</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				<a href="doctors.html">Our Doctors</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+                <a href="facilities.html">Our Facilities</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				<a href="services.html">Our Services</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				
+               
+                
+                <a href="health-packages.html">Health Packages</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                <a href="emergency-care.html">Emergency care</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            </div>
+            <div class="right-link">
+                <a href="book-an-appointment.html">
+                    Book an Appointment
+                    <span class="material-symbols-outlined">trending_flat</span>
+                </a>
+            </div>
+        </div>
+		
+		<section class="mobile-search-helpline">
+       <div class="search-container">
+    <input type="text" placeholder="Search for doctor or treatment" class="searchbox" style="font-size: 0.55rem;" name="search" id="search-small">
+    <button class="search-button">
+        <i class="material-symbols-outlined">search</i>
+    </button>
+    <div id="search-results-small" class="search-results"></div>
+</div>
+			
+			<style>
+@media (min-width: 551px) {
+    .searchbox {
+        font-size: 0.7rem !important; /* Adjust the font size as needed */
+    }
+}
+
+@media (max-width: 550px) {
+    .searchbox {
+        font-size: 0.6rem !important; /* Adjust the font size as needed */
+    }
+}
+</style>
+
+        <span class="helpline">
+            <i class="material-symbols-outlined">phone_in_talk</i>
+            <div class="helpline-container">
+                <span class="small-text">24x7 Helpline</span><br>
+                <span class="big-text">1800 5533 3355</span>
+            </div>
+        </span>
+    </section>
+    
+			
+    </header>
+	
+	<main>
+		
+	
+		<section class="content-section-doctors">
+    <div class="left-side-doctors">
+        <div class="pill-caption">CARE BEYOND BOUNDARIES</div>
+        <h1 class="headline-doctors">Meet Our Team of Expert Doctors
+</h1>
+    </div>
+    <div class="right-side-doctors">
+        <p class="paragraph-doctors">With diverse expertise across medical specialties, our physicians bring a blend of advanced knowledge, experience, and a patient-first approach to every interaction. They are committed to delivering personalized care, tailored to each individual's unique needs.</p>
+    </div>
+</section>
+
+		
+	
+<section class="doctors-section">
+  <!-- Doctor Tile 1 -->
+  <div class="doctor-tile">
+    <!-- Top section with doctor image and details -->
+    <div class="tile-top">
+      <div class="tile-img">
+        <img src="assets/dr-nitn-shinde.png" alt="Doctor Photo">
+      </div>
+      <div class="tile-info">
+        <div class="pill-caption-doctor">Internal Medicine &amp; Infections</div>
+        <h2 class="doctor-name">Dr. Nitin Shinde</h2>
+        <p class="doctor-qualification">MBBS, MD, (Internal Medicine), Post-Doctoral
+Fellowship in Infectious Diseases</p>
+      </div>
+    </div>
+    <!-- Accordion Section -->
+    <div class="tile-accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Work Experience</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Alexis Multispecialty Hospital, Nagpur – ( June 2018 – till date) </span>
+<span class="bullet">&bull; Wockhardt Multispecialty Hospital, Nagpur – (April 2013 – June 2018)</span>
+<span class="bullet">&bull; Fellow –Columbia Asia Hospital, Bangalore - (July 2011–Feb 2013)</span>
+<span class="bullet">&bull; Junior Consultant – Indus Westside Hospital, Int Medicine - (Oct 2010 - Aug 2011)</span>
+<span class="bullet">&bull; Clinical Assistant in Critical care – Dr. L.H Hiranandani Hospital - (June 2010- Oct 2010)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Educational Qualifications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MD (Internal Medicine) – Government Medical College, Nagpur (2010)</span>
+			  
+			  <span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MBBS – JN Medical College, Wardha, Maharashtra (2005)</span>
+
+<span class="bullet">&bull; Rajiv Gandhi University of Health Sciences, Karnataka, Post-doctoral Fellowship in Infectious Diseases</span>
+
+<span class="bullet">&bull; MGR University, Tamilnadu and CMC, Vellore, International Course in Tropical Medicine (2012)</span>
+
+<span class="bullet">&bull; Harvard Medical School, Boston, USA, Course: Update in Internal Medicine for Specialists (2023)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Publications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Clinical Profile, Maternal and Fetal Outcomes of Acute Hepatitis E in Pregnancy Shinde NR, Patil TB, Deshpande AS, Gulhane RV, Patil MB, Bansod YV Annals of Medical and Health Sciences Research, 2014; 4(8): 133–139</span>
+
+<span class="bullet">&bull; Scrub Typhus Shinde NR Vidarbha Journal of Internal Medicine, January 2019; 26: 52–54</span>
+
+<span class="bullet">&bull; HIV from Blood Exposures in India Shinde NR Vidarbha Journal of Internal Medicine, July 2019; 27: 56–58</span>
+
+<span class="bullet">&bull; COVID-19: A Review Shinde NR Vidarbha Journal of Internal Medicine, July 2020; 29: 71–75</span>
+
+<span class="bullet">&bull; "Chennai Declaration": 5-Year Plan to Tackle the Challenge of Anti-Microbial Resistance Team C Indian Journal of Medical Microbiology, 2014; 32: 221–228</span>
+	
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Other Acedemic Activities</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Contributor, National Guidelines for Infection Prevention and Control in Healthcare Facilities
+, Organization: NCDC, MOHFW, Date: January 2020</span>
+
+<span class="bullet">&bull; Organizing Secretary/Faculty, Event: National Conference of Clinical Infectious Disease Society of India (CIDSCON), Sessions: 2017 &amp; 2020</span>
+
+<span class="bullet">&bull; Speaker and Coordinator, Scientific Committee, Event: Regional Infectious Disease Conference (IDCON, 2016)</span>
+
+<span class="bullet">&bull; Chairman, Scientific Committee, Event: Infection And Prevention Control Conference at Wockhardt Hospital (IMA Nagpur/Mumbai), Years: 2014, 2015, 2016, 2017, 2018</span>
+
+<span class="bullet">&bull; Contributing Author, Publication: API Textbook of Medicine (11th and 12th editions)</span>
+
+<span class="bullet">&bull; Post Graduate Teacher in Medicine, Role: Teacher for the National Board of Examination</span>
+
+<span class="bullet">&bull; Course Director, Advanced Course in Infection Control, Institution: Alexis Hospital, Nagpur, Sessions: February 2023 &amp; January 2024</span>
+	
+	</p>
+        </div>
+      </div>
+		
+      <div class="accordion-item">
+        <button class="accordion-header">References</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Dr. Rajini Ashok Senior Director, Clinical Quality Zulekha and Alexis Hospitals, Dubai, UAE</span>
+
+<span class="bullet">&bull; Dr. Swati Rajagopal Consultant, Infectious Diseases and Travel Medicine Aster CMI Hospital, Bengaluru, India</span>
+
+<span class="bullet">&bull; Dr. Tushar Gawad Chief Operating Officer (COO) KIMS Hospitals, Nagpur, India</span>
+		  
+		  </p>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Button -->
+    <div class="tile-booking">
+      <button class="booking-btn">Book Appointment</button>
+    </div>
+  </div>
+	
+	
+	
+	
+	
+	
+
+  <!-- Doctor Tile 2 -->
+  <div class="doctor-tile">
+    <div class="tile-top">
+      <div class="tile-img">
+        <img src="assets/dr-rashmi-shinde.png" alt="Doctor Photo">
+      </div>
+      <div class="tile-info">
+        <div class="pill-caption-doctor">Obstetrics, Gynecology &amp; IVF</div>
+        <h2 class="doctor-name">Dr. Rashmi Shinde</h2>
+        <p class="doctor-qualification">MBBS, MS (OBGY), DNB (OBGY), MRCOG, Fellowship in Obstetric Medicine &amp; IVF</p>
+      </div>
+    </div>
+    <div class="tile-accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Work Experience</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; 10 Years of Experience in Obstetrics and Gynecology: Demonstrated expertise with over a decade in the field.</span>
+
+<span class="bullet">&bull; High-Risk Deliveries: Conducted more than 600 high-risk deliveries.</span>
+
+<span class="bullet">&bull; Consultant at Wockhardt Hospital (Nagpur): Providing expert care and guidance in obstetrics and gynecology.</span>
+
+<span class="bullet">&bull; Assistant Professor at GMC (Nagpur): Educating and mentoring future healthcare professionals.</span>
+
+<span class="bullet">&bull; Consultant at Matrusewa Sangh, Mahal (Nagpur): Leading clinical practice in obstetric medicine.</span>
+			  
+<span class="bullet">&bull; Fellow in High-Risk Pregnancy at Fernandez Hospital (Hyderabad): Specialized training and hands-on experience in managing complex pregnancy cases.</span>
+	
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Educational Qualifications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; MBBS: Bachelor of Medicine, Bachelor of Surgery</span>
+
+<span class="bullet">&bull; MS (OBGY): Master of Surgery in Obstetrics &amp; Gynecology</span>
+
+<span class="bullet">&bull; DNB (OBGY): Diplomate of National Board in Obstetrics &amp; Gynecology</span>
+
+<span class="bullet">&bull; MRCOG: Member of the Royal College of Obstetricians and Gynaecologists</span>
+
+<span class="bullet">&bull; Fellowship in High-Risk Pregnancy and Obstetric Medicine</span>
+
+<span class="bullet">&bull; Fellowship in IVF: Specialized Fellowship in In Vitro Fertilization</span>
+	
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Publications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">Research Study: “To assess the predictive value of cytological smear and culture of vaginal discharge in reproductive age group women” This research work evaluates diagnostic approaches in reproductive health.</span>
+			  </p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Other Academic Activities</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Training Programmes:<br>
+
+-Completed K2MS CTG Training<br>-Participated in Perineal Tear Repair Workshop<br>-Attended Basic Colposcopy Training Workshop<br>-Participated in Obstetrics Emergencies and Life Support Skills Workshop.</span>
+
+<span class="bullet">&bull; Areas of Expertise:<br>
+
+-Management in the Obstetric ICU<br>
+
+-Handling medical disorders complicating pregnancy<br>
+
+-Promoting natural births (vaginal deliveries)<br>
+
+-Infertility management<br>
+
+-Hysteroscopy</span>
+
+<span class="bullet">&bull; Membership:<br>
+
+-Federation of Obstetrics and Gynecology Society of India (FOGSI)<br>
+
+-Society of Obstetric Medicine of India (SOMI)</span>
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">References</button>
+        <div class="accordion-content">
+          <p>Details available upon request.</p>
+        </div>
+      </div>
+    </div>
+    <div class="tile-booking">
+      <button class="booking-btn">Book Appointment</button>
+    </div>
+  </div>
+
+	
+	
+	
+	
+	
+	
+  <!-- Doctor Tile 3 -->
+  <div class="doctor-tile">
+    <!-- Top section with doctor image and details -->
+    <div class="tile-top">
+      <div class="tile-img">
+        <img src="assets/dr-nishant-deshpandey.png" alt="Doctor Photo">
+      </div>
+      <div class="tile-info">
+        <div class="pill-caption-doctor">General Medicine &amp; Nephrology</div>
+        <h2 class="doctor-name">Dr. Nishant Deshpande</h2>
+        <p class="doctor-qualification">MBBS, MD, (General Medicine), Diplomate of the National Board in Nephrology.
+
+</p>
+      </div>
+    </div>
+    <!-- Accordion Section -->
+    <div class="tile-accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Work Experience</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Alexis Multispecialty Hospital, Nagpur – ( June 2018 – till date) </span>
+<span class="bullet">&bull; Wockhardt Multispecialty Hospital, Nagpur – (April 2013 – June 2018)</span>
+<span class="bullet">&bull; Fellow –Columbia Asia Hospital, Bangalore - (July 2011–Feb 2013)</span>
+<span class="bullet">&bull; Junior Consultant – Indus Westside Hospital, Int Medicine - (Oct 2010 - Aug 2011)</span>
+<span class="bullet">&bull; Clinical Assistant in Critical care – Dr. L.H Hiranandani Hospital - (June 2010- Oct 2010)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Educational Qualifications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MD (Internal Medicine) – Government Medical College, Nagpur (2010)</span>
+			  
+			  <span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MBBS – JN Medical College, Wardha, Maharashtra (2005)</span>
+
+<span class="bullet">&bull; Rajiv Gandhi University of Health Sciences, Karnataka, Post-doctoral Fellowship in Infectious Diseases</span>
+
+<span class="bullet">&bull; MGR University, Tamilnadu and CMC, Vellore, International Course in Tropical Medicine (2012)</span>
+
+<span class="bullet">&bull; Harvard Medical School, Boston, USA, Course: Update in Internal Medicine for Specialists (2023)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Publications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Clinical Profile, Maternal and Fetal Outcomes of Acute Hepatitis E in Pregnancy Shinde NR, Patil TB, Deshpande AS, Gulhane RV, Patil MB, Bansod YV Annals of Medical and Health Sciences Research, 2014; 4(8): 133–139</span>
+
+<span class="bullet">&bull; Scrub Typhus Shinde NR Vidarbha Journal of Internal Medicine, January 2019; 26: 52–54</span>
+
+<span class="bullet">&bull; HIV from Blood Exposures in India Shinde NR Vidarbha Journal of Internal Medicine, July 2019; 27: 56–58</span>
+
+<span class="bullet">&bull; COVID-19: A Review Shinde NR Vidarbha Journal of Internal Medicine, July 2020; 29: 71–75</span>
+
+<span class="bullet">&bull; "Chennai Declaration": 5-Year Plan to Tackle the Challenge of Anti-Microbial Resistance Team C Indian Journal of Medical Microbiology, 2014; 32: 221–228</span>
+	
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Other Acedemic Activities</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Contributor, National Guidelines for Infection Prevention and Control in Healthcare Facilities
+, Organization: NCDC, MOHFW, Date: January 2020</span>
+
+<span class="bullet">&bull; Organizing Secretary/Faculty, Event: National Conference of Clinical Infectious Disease Society of India (CIDSCON), Sessions: 2017 &amp; 2020</span>
+
+<span class="bullet">&bull; Speaker and Coordinator, Scientific Committee, Event: Regional Infectious Disease Conference (IDCON, 2016)</span>
+
+<span class="bullet">&bull; Chairman, Scientific Committee, Event: Infection And Prevention Control Conference at Wockhardt Hospital (IMA Nagpur/Mumbai), Years: 2014, 2015, 2016, 2017, 2018</span>
+
+<span class="bullet">&bull; Contributing Author, Publication: API Textbook of Medicine (11th and 12th editions)</span>
+
+<span class="bullet">&bull; Post Graduate Teacher in Medicine, Role: Teacher for the National Board of Examination</span>
+
+<span class="bullet">&bull; Course Director, Advanced Course in Infection Control, Institution: Alexis Hospital, Nagpur, Sessions: February 2023 &amp; January 2024</span>
+	
+	</p>
+        </div>
+      </div>
+		
+		
+		
+      <div class="accordion-item">
+        <button class="accordion-header">References</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Dr. Rajini Ashok Senior Director, Clinical Quality Zulekha and Alexis Hospitals, Dubai, UAE</span>
+
+<span class="bullet">&bull; Dr. Swati Rajagopal Consultant, Infectious Diseases and Travel Medicine Aster CMI Hospital, Bengaluru, India</span>
+
+<span class="bullet">&bull; Dr. Tushar Gawad Chief Operating Officer (COO) KIMS Hospitals, Nagpur, India</span>
+		  
+		  </p>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Button -->
+    <div class="tile-booking">
+      <button class="booking-btn">Book Appointment</button>
+    </div>
+  </div>
+	
+	
+	
+	
+	
+	
+
+  <!-- Doctor Tile 4 -->
+  <div class="doctor-tile">
+    <!-- Top section with doctor image and details -->
+    <div class="tile-top">
+      <div class="tile-img">
+        <img src="assets/dr-tushar-patil.png" alt="Doctor Photo">
+      </div>
+      <div class="tile-info">
+        <div class="pill-caption-doctor">Neurology &amp; Neurocritical Care
+
+</div>
+        <h2 class="doctor-name">Dr. Tushar Patil</h2>
+        <p class="doctor-qualification">MBBS, MD, (General Medicine), DM (Neurology), Neurocritical &amp; Stroke Fellowship</p>
+      </div>
+    </div>
+    <!-- Accordion Section -->
+    <div class="tile-accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Work Experience</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Alexis Multispecialty Hospital, Nagpur – ( June 2018 – till date) </span>
+<span class="bullet">&bull; Wockhardt Multispecialty Hospital, Nagpur – (April 2013 – June 2018)</span>
+<span class="bullet">&bull; Fellow –Columbia Asia Hospital, Bangalore - (July 2011–Feb 2013)</span>
+<span class="bullet">&bull; Junior Consultant – Indus Westside Hospital, Int Medicine - (Oct 2010 - Aug 2011)</span>
+<span class="bullet">&bull; Clinical Assistant in Critical care – Dr. L.H Hiranandani Hospital - (June 2010- Oct 2010)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Educational Qualifications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MD (Internal Medicine) – Government Medical College, Nagpur (2010)</span>
+			  
+			  <span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MBBS – JN Medical College, Wardha, Maharashtra (2005)</span>
+
+<span class="bullet">&bull; Rajiv Gandhi University of Health Sciences, Karnataka, Post-doctoral Fellowship in Infectious Diseases</span>
+
+<span class="bullet">&bull; MGR University, Tamilnadu and CMC, Vellore, International Course in Tropical Medicine (2012)</span>
+
+<span class="bullet">&bull; Harvard Medical School, Boston, USA, Course: Update in Internal Medicine for Specialists (2023)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Publications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Clinical Profile, Maternal and Fetal Outcomes of Acute Hepatitis E in Pregnancy Shinde NR, Patil TB, Deshpande AS, Gulhane RV, Patil MB, Bansod YV Annals of Medical and Health Sciences Research, 2014; 4(8): 133–139</span>
+
+<span class="bullet">&bull; Scrub Typhus Shinde NR Vidarbha Journal of Internal Medicine, January 2019; 26: 52–54</span>
+
+<span class="bullet">&bull; HIV from Blood Exposures in India Shinde NR Vidarbha Journal of Internal Medicine, July 2019; 27: 56–58</span>
+
+<span class="bullet">&bull; COVID-19: A Review Shinde NR Vidarbha Journal of Internal Medicine, July 2020; 29: 71–75</span>
+
+<span class="bullet">&bull; "Chennai Declaration": 5-Year Plan to Tackle the Challenge of Anti-Microbial Resistance Team C Indian Journal of Medical Microbiology, 2014; 32: 221–228</span>
+	
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Other Acedemic Activities</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Contributor, National Guidelines for Infection Prevention and Control in Healthcare Facilities
+, Organization: NCDC, MOHFW, Date: January 2020</span>
+
+<span class="bullet">&bull; Organizing Secretary/Faculty, Event: National Conference of Clinical Infectious Disease Society of India (CIDSCON), Sessions: 2017 &amp; 2020</span>
+
+<span class="bullet">&bull; Speaker and Coordinator, Scientific Committee, Event: Regional Infectious Disease Conference (IDCON, 2016)</span>
+
+<span class="bullet">&bull; Chairman, Scientific Committee, Event: Infection And Prevention Control Conference at Wockhardt Hospital (IMA Nagpur/Mumbai), Years: 2014, 2015, 2016, 2017, 2018</span>
+
+<span class="bullet">&bull; Contributing Author, Publication: API Textbook of Medicine (11th and 12th editions)</span>
+
+<span class="bullet">&bull; Post Graduate Teacher in Medicine, Role: Teacher for the National Board of Examination</span>
+
+<span class="bullet">&bull; Course Director, Advanced Course in Infection Control, Institution: Alexis Hospital, Nagpur, Sessions: February 2023 &amp; January 2024</span>
+	
+	</p>
+        </div>
+      </div>
+		
+		
+		
+      <div class="accordion-item">
+        <button class="accordion-header">References</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Dr. Rajini Ashok Senior Director, Clinical Quality Zulekha and Alexis Hospitals, Dubai, UAE</span>
+
+<span class="bullet">&bull; Dr. Swati Rajagopal Consultant, Infectious Diseases and Travel Medicine Aster CMI Hospital, Bengaluru, India</span>
+
+<span class="bullet">&bull; Dr. Tushar Gawad Chief Operating Officer (COO) KIMS Hospitals, Nagpur, India</span>
+		  
+		  </p>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Button -->
+    <div class="tile-booking">
+      <button class="booking-btn">Book Appointment</button>
+    </div>
+  </div>
+	
+	
+	
+	
+	
+	
+	<!-- Doctor Tile 5 -->
+  <div class="doctor-tile">
+    <!-- Top section with doctor image and details -->
+    <div class="tile-top">
+      <div class="tile-img">
+        <img src="assets/dr-shivani-malhotra.png" alt="Doctor Photo">
+      </div>
+      <div class="tile-info">
+        <div class="pill-caption-doctor">Cardiology &amp; Vascular Medicine</div>
+        <h2 class="doctor-name">Dr. Shivani Malhotra</h2>
+        <p class="doctor-qualification">MBBS, MD (General Medicine), DM (Cardiology and Internal Vascular Health)</p>
+      </div>
+    </div>
+    <!-- Accordion Section -->
+    <div class="tile-accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Work Experience</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Alexis Multispecialty Hospital, Nagpur – ( June 2018 – till date) </span>
+<span class="bullet">&bull; Wockhardt Multispecialty Hospital, Nagpur – (April 2013 – June 2018)</span>
+<span class="bullet">&bull; Fellow –Columbia Asia Hospital, Bangalore - (July 2011–Feb 2013)</span>
+<span class="bullet">&bull; Junior Consultant – Indus Westside Hospital, Int Medicine - (Oct 2010 - Aug 2011)</span>
+<span class="bullet">&bull; Clinical Assistant in Critical care – Dr. L.H Hiranandani Hospital - (June 2010- Oct 2010)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Educational Qualifications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MD (Internal Medicine) – Government Medical College, Nagpur (2010)</span>
+			  
+			  <span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MBBS – JN Medical College, Wardha, Maharashtra (2005)</span>
+
+<span class="bullet">&bull; Rajiv Gandhi University of Health Sciences, Karnataka, Post-doctoral Fellowship in Infectious Diseases</span>
+
+<span class="bullet">&bull; MGR University, Tamilnadu and CMC, Vellore, International Course in Tropical Medicine (2012)</span>
+
+<span class="bullet">&bull; Harvard Medical School, Boston, USA, Course: Update in Internal Medicine for Specialists (2023)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Publications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Clinical Profile, Maternal and Fetal Outcomes of Acute Hepatitis E in Pregnancy Shinde NR, Patil TB, Deshpande AS, Gulhane RV, Patil MB, Bansod YV Annals of Medical and Health Sciences Research, 2014; 4(8): 133–139</span>
+
+<span class="bullet">&bull; Scrub Typhus Shinde NR Vidarbha Journal of Internal Medicine, January 2019; 26: 52–54</span>
+
+<span class="bullet">&bull; HIV from Blood Exposures in India Shinde NR Vidarbha Journal of Internal Medicine, July 2019; 27: 56–58</span>
+
+<span class="bullet">&bull; COVID-19: A Review Shinde NR Vidarbha Journal of Internal Medicine, July 2020; 29: 71–75</span>
+
+<span class="bullet">&bull; "Chennai Declaration": 5-Year Plan to Tackle the Challenge of Anti-Microbial Resistance Team C Indian Journal of Medical Microbiology, 2014; 32: 221–228</span>
+	
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Other Acedemic Activities</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Contributor, National Guidelines for Infection Prevention and Control in Healthcare Facilities
+, Organization: NCDC, MOHFW, Date: January 2020</span>
+
+<span class="bullet">&bull; Organizing Secretary/Faculty, Event: National Conference of Clinical Infectious Disease Society of India (CIDSCON), Sessions: 2017 &amp; 2020</span>
+
+<span class="bullet">&bull; Speaker and Coordinator, Scientific Committee, Event: Regional Infectious Disease Conference (IDCON, 2016)</span>
+
+<span class="bullet">&bull; Chairman, Scientific Committee, Event: Infection And Prevention Control Conference at Wockhardt Hospital (IMA Nagpur/Mumbai), Years: 2014, 2015, 2016, 2017, 2018</span>
+
+<span class="bullet">&bull; Contributing Author, Publication: API Textbook of Medicine (11th and 12th editions)</span>
+
+<span class="bullet">&bull; Post Graduate Teacher in Medicine, Role: Teacher for the National Board of Examination</span>
+
+<span class="bullet">&bull; Course Director, Advanced Course in Infection Control, Institution: Alexis Hospital, Nagpur, Sessions: February 2023 &amp; January 2024</span>
+	
+	</p>
+        </div>
+      </div>
+		
+		
+		
+      <div class="accordion-item">
+        <button class="accordion-header">References</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Dr. Rajini Ashok Senior Director, Clinical Quality Zulekha and Alexis Hospitals, Dubai, UAE</span>
+
+<span class="bullet">&bull; Dr. Swati Rajagopal Consultant, Infectious Diseases and Travel Medicine Aster CMI Hospital, Bengaluru, India</span>
+
+<span class="bullet">&bull; Dr. Tushar Gawad Chief Operating Officer (COO) KIMS Hospitals, Nagpur, India</span>
+		  
+		  </p>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Button -->
+    <div class="tile-booking">
+      <button class="booking-btn">Book Appointment</button>
+    </div>
+  </div>
+	
+	
+	
+	
+<!-- Doctor Tile 6 -->
+  <div class="doctor-tile">
+    <!-- Top section with doctor image and details -->
+    <div class="tile-top">
+      <div class="tile-img">
+        <img src="assets/dr-rajiv-joshi.png" alt="Doctor Photo">
+      </div>
+      <div class="tile-info">
+        <div class="pill-caption-doctor">Orthopedics &amp; Sports Medicine</div>
+        <h2 class="doctor-name">Dr. Rajiv Joshi</h2>
+        <p class="doctor-qualification">MBBS, MS (Orthopedics), Clinical Fellowship in Sports Medicine &amp; Bone Care</p>
+      </div>
+    </div>
+    <!-- Accordion Section -->
+    <div class="tile-accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Work Experience</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Alexis Multispecialty Hospital, Nagpur – ( June 2018 – till date) </span>
+<span class="bullet">&bull; Wockhardt Multispecialty Hospital, Nagpur – (April 2013 – June 2018)</span>
+<span class="bullet">&bull; Fellow –Columbia Asia Hospital, Bangalore - (July 2011–Feb 2013)</span>
+<span class="bullet">&bull; Junior Consultant – Indus Westside Hospital, Int Medicine - (Oct 2010 - Aug 2011)</span>
+<span class="bullet">&bull; Clinical Assistant in Critical care – Dr. L.H Hiranandani Hospital - (June 2010- Oct 2010)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Educational Qualifications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MD (Internal Medicine) – Government Medical College, Nagpur (2010)</span>
+			  
+			  <span class="bullet">&bull; Maharashtra University Of Health Sciences, Maharashtra, MBBS – JN Medical College, Wardha, Maharashtra (2005)</span>
+
+<span class="bullet">&bull; Rajiv Gandhi University of Health Sciences, Karnataka, Post-doctoral Fellowship in Infectious Diseases</span>
+
+<span class="bullet">&bull; MGR University, Tamilnadu and CMC, Vellore, International Course in Tropical Medicine (2012)</span>
+
+<span class="bullet">&bull; Harvard Medical School, Boston, USA, Course: Update in Internal Medicine for Specialists (2023)</span>
+			
+			</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Publications</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Clinical Profile, Maternal and Fetal Outcomes of Acute Hepatitis E in Pregnancy Shinde NR, Patil TB, Deshpande AS, Gulhane RV, Patil MB, Bansod YV Annals of Medical and Health Sciences Research, 2014; 4(8): 133–139</span>
+
+<span class="bullet">&bull; Scrub Typhus Shinde NR Vidarbha Journal of Internal Medicine, January 2019; 26: 52–54</span>
+
+<span class="bullet">&bull; HIV from Blood Exposures in India Shinde NR Vidarbha Journal of Internal Medicine, July 2019; 27: 56–58</span>
+
+<span class="bullet">&bull; COVID-19: A Review Shinde NR Vidarbha Journal of Internal Medicine, July 2020; 29: 71–75</span>
+
+<span class="bullet">&bull; "Chennai Declaration": 5-Year Plan to Tackle the Challenge of Anti-Microbial Resistance Team C Indian Journal of Medical Microbiology, 2014; 32: 221–228</span>
+	
+	</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Other Acedemic Activities</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Contributor, National Guidelines for Infection Prevention and Control in Healthcare Facilities
+, Organization: NCDC, MOHFW, Date: January 2020</span>
+
+<span class="bullet">&bull; Organizing Secretary/Faculty, Event: National Conference of Clinical Infectious Disease Society of India (CIDSCON), Sessions: 2017 &amp; 2020</span>
+
+<span class="bullet">&bull; Speaker and Coordinator, Scientific Committee, Event: Regional Infectious Disease Conference (IDCON, 2016)</span>
+
+<span class="bullet">&bull; Chairman, Scientific Committee, Event: Infection And Prevention Control Conference at Wockhardt Hospital (IMA Nagpur/Mumbai), Years: 2014, 2015, 2016, 2017, 2018</span>
+
+<span class="bullet">&bull; Contributing Author, Publication: API Textbook of Medicine (11th and 12th editions)</span>
+
+<span class="bullet">&bull; Post Graduate Teacher in Medicine, Role: Teacher for the National Board of Examination</span>
+
+<span class="bullet">&bull; Course Director, Advanced Course in Infection Control, Institution: Alexis Hospital, Nagpur, Sessions: February 2023 &amp; January 2024</span>
+	
+	</p>
+        </div>
+      </div>
+		
+		
+		
+      <div class="accordion-item">
+        <button class="accordion-header">References</button>
+        <div class="accordion-content">
+          <p><span class="bullet">&bull; Dr. Rajini Ashok Senior Director, Clinical Quality Zulekha and Alexis Hospitals, Dubai, UAE</span>
+
+<span class="bullet">&bull; Dr. Swati Rajagopal Consultant, Infectious Diseases and Travel Medicine Aster CMI Hospital, Bengaluru, India</span>
+
+<span class="bullet">&bull; Dr. Tushar Gawad Chief Operating Officer (COO) KIMS Hospitals, Nagpur, India</span>
+		  
+		  </p>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Button -->
+    <div class="tile-booking">
+      <button class="booking-btn">Book Appointment</button>
+    </div>
+  </div>
+		
+	
+	
+	
+	
+	
+</section>	
+		
+		
+		
+		
+	
+		<section class="ctn-section ctn-two-col-section">
+  <!-- Left Column: Contact Info -->
+  <div class="ctn-left-col">
+    <span class="ctn-caption-pill">GET IN TOUCH</span>
+    <h2 class="ctn-heading">We're here to help you on
+your healthcare journey</h2>
+    <p class="ctn-paragraph">
+      At Stellar, we are dedicated to providing care, dignity, and hope
+at every step of your healthcare journey. Whether you have questions,
+need assistance, or want to schedule an appointment, our team is
+ready to support you. Reach out to us today, and let us guide you
+toward healing and wellness.
+    </p>
+    <!-- Google Map Embed for 30, Gurudev Nagar, Nanaganwan, Nagpur -->
+    <iframe 
+  class="responsive-map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14886.325390824084!2d79.10308023940313!3d21.12925070074007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c759f99c09c9%3A0x6e1aa815461d286d!2s30%2C%20Gurudev%20Nagar%2C%20Bapu%20Nagar%2C%20Nandanvan%2C%20Nagpur%2C%20Maharashtra%20440024%2C%20India!5e0!3m2!1sen!2sus!4v1741178181333!5m2!1sen!2sus" 
+  height="auto" 
+  style="border: 2px solid #103153; border-radius: 15px; background-color: rgba(255,255,255,0.44);" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+
+
+    <button class="ctn-btn">GET DIRECTIONS </button>&nbsp; <button class="ctn-btn">BOOK AN APPOINTMENT </button>
+  </div>
+  
+  <!-- Right Column: Contact Form -->
+  <div class="ctn-right-col">
+    <form class="ctn-form" action="send_email.php" method="post">
+      <div class="ctn-form-group">
+        <label for="ctn-name">Name</label>
+        <input type="text" id="ctn-name" name="ctn-name" placeholder="Your Name" required>
+      </div>
+      <div class="ctn-form-group">
+        <label for="ctn-email">Email</label>
+        <input type="email" id="ctn-email" name="ctn-email" placeholder="Your Email" required>
+      </div>
+      <div class="ctn-form-group">
+        <label for="ctn-message">Message</label>
+        <textarea id="ctn-message" name="ctn-message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <!-- The CSRF token will be dynamically populated -->
+      <input type="hidden" name="csrf_token" id="csrf_token" value="">
+      <button type="submit" class="ctn-submit-btn">SEND MESSAGE</button>
+    </form>
+  </div>
+
+</section>
+
+		
+		
+		
+</main>
+
+	
+  <section id="address-bar-section">
+    <div class="address-bar-container">
+      <div class="address-bar-left">
+        <h3 class="address-bar-title">STELLAR HEALTH</h3>
+        <p class="address-bar-description">
+          Where modern care meets compassion, blending technology with human touch.
+        </p>
+      </div>
+      <div class="address-bar-right">
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Hospital Address:</h4>
+          <address>
+            30, Gurudev Nagar,<br>
+            Nandanwan, Nagpur,<br>
+            Maharashtra, India.
+          </address>
+        </div>
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Contact Details:</h4>
+          <address>
+            Email: info@stellarhospital.com<br>
+            Local: 1-514-700-0663<br>
+            Toll-Free: 1-833-213-6353
+          </address>
+        </div>
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Hospital Timings:</h4>
+          <address>
+            Weekdays:  8:00 a.m. – 8:00 p.m.<br>
+            Saturdays:  9:00 a.m. – 2:00 p.m.<br>
+            Sundays:  Closed
+          </address>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+	
+	<footer>
+  <div class="footer-main">
+    <!-- Navigation on left -->
+    <nav class="footer-nav-links">
+      <a href="index.html" class="active">About Stellar Hospital</a>
+		
+		
+      <a href="about-us.html">Facilities</a>
+      <a href="factory.html">Health Packages</a>
+      <a href="network.html">Emergency Care</a>
+      <a href="quality.html">Download App</a>
+      <a href="certifications.html">Contact Us</a>
+		
+    </nav>
+
+    <!-- Hamburger icon for mobile (will only show on screens <900px) -->
+    <div class="footer-hamburger" onclick="toggleFooterMenu()"></div>
+
+    <!-- Logo on right -->
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="assets/stellar-health-nagpur.png" alt="Logo">
+      </a>
+    </div>
+  </div>
+	
+	<div class="footer-bar">
+			
+    <div class="footer-left">Copyright © 2025</div>
+    <div class="footer-right">All rights reserved by Stellar Health</div>
+  </div>	
+		
+		
+		
+		
+</footer>
+	
+	<script>
+  // JavaScript to control accordion functionality per tile
+  document.addEventListener('DOMContentLoaded', function() {
+    const allTiles = document.querySelectorAll('.doctor-tile');
+    allTiles.forEach(tile => {
+      const headers = tile.querySelectorAll('.accordion-header');
+      headers.forEach(header => {
+        header.addEventListener('click', function() {
+          // Find this tile's accordion container
+          const accordion = header.closest('.tile-accordion');
+          // Close any other open item inside the same accordion
+          const activeItem = accordion.querySelector('.accordion-item.active');
+          if (activeItem && activeItem !== header.parentElement) {
+            activeItem.classList.remove('active');
+          }
+          // Toggle the clicked item
+          header.parentElement.classList.toggle('active');
+        });
+      });
+    });
+  });
+</script>
+
+	<script>
+  function toggleFooterMenu() {
+    const footerNav = document.querySelector('.footer-nav-links');
+    const footerHamburger = document.querySelector('.footer-hamburger');
+    // Toggle between 'flex' and 'none'
+    const isActive = footerNav.style.display === 'flex';
+    footerNav.style.display = isActive ? 'none' : 'flex';
+    footerHamburger.classList.toggle('active');
+  }
+</script>
+	
+	
+	<script>
+    // Select DOM elements
+    const nextBtn = document.querySelector('.carousel-nav.next');
+    const prevBtn = document.querySelector('.carousel-nav.prev');
+    const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+    // Navigate to the next "page" of tiles
+    nextBtn.addEventListener('click', () => {
+      carouselWrapper.scrollBy({ left: carouselWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Navigate to the previous "page" of tiles
+    prevBtn.addEventListener('click', () => {
+      carouselWrapper.scrollBy({ left: -carouselWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Optional: Enable mouse drag / touch swipe support for desktop
+    let isDown = false;
+    let startX;
+    
+    carouselWrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - carouselWrapper.offsetLeft;
+      carouselWrapper.style.cursor = 'grabbing';
+    });
+
+    carouselWrapper.addEventListener('mouseup', () => {
+      isDown = false;
+      carouselWrapper.style.cursor = 'grab';
+    });
+
+    carouselWrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    carouselWrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carouselWrapper.offsetLeft;
+      const walk = startX - x;
+      carouselWrapper.scrollLeft += walk;
+    });
+
+    // Touch events for mobile
+    carouselWrapper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX;
+    });
+    carouselWrapper.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX;
+      const walk = startX - x;
+      carouselWrapper.scrollLeft += walk;
+      startX = x;
+    });
+  </script>
+	
+	
+	
+	
+	<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select DOM elements for Testimonials Carousel
+    const nextTestimonialBtn = document.querySelector('.testimonial-carousel-nav.next');
+    const prevTestimonialBtn = document.querySelector('.testimonial-carousel-nav.prev');
+    const testimonialWrapper = document.querySelector('.testimonial-carousel-wrapper');
+
+    // Navigate to the next set of testimonials
+    nextTestimonialBtn.addEventListener('click', () => {
+      testimonialWrapper.scrollBy({ left: testimonialWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Navigate to the previous set of testimonials
+    prevTestimonialBtn.addEventListener('click', () => {
+      testimonialWrapper.scrollBy({ left: -testimonialWrapper.offsetWidth, behavior: 'smooth' });
+    });
+
+    // Enable mouse drag (desktop)
+    let isDown = false;
+    let startX;
+
+    testimonialWrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - testimonialWrapper.offsetLeft;
+      testimonialWrapper.style.cursor = 'grabbing';
+    });
+
+    testimonialWrapper.addEventListener('mouseup', () => {
+      isDown = false;
+      testimonialWrapper.style.cursor = 'grab';
+    });
+
+    testimonialWrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+
+    testimonialWrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - testimonialWrapper.offsetLeft;
+      const walk = startX - x;
+      testimonialWrapper.scrollLeft += walk;
+    });
+
+    // Touch events for mobile swiping
+    testimonialWrapper.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX;
+    });
+
+    testimonialWrapper.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX;
+      const walk = startX - x;
+      testimonialWrapper.scrollLeft += walk;
+      startX = x;
+    });
+  });
+</script>
+
+	
+	
+	
+	<script>
+	// List of predefined pages with their titles and URLs
+const pages = [
+  { title: "Dr. Nishant S Deshpande - Nephrology", url: "doctor-nishant-nephrology.html" },
+  { title: "Dr. Nitin Shinde - Infectious Diseases & Internal Medicine   ", url: "doctor-nitin-infectious-diseases.html" },
+  { title: "General Surgery", url: "general-surgery.html" },
+  { title: "Physical Therapy", url: "physical-therapy.html" }, 
+	{ title: "Dr. Tushar Patil - Neurology", url: "doctor-tushar-neurology.html" },
+  { title: "Dr. Rashmi Shinde - Obstetric Medicine , Gynecology  and IVF   ", url: "doctor-rashmi-gynecologist.html" },
+	
+  // Add more pages here
+];
+
+function performSearch(searchId, resultsId) {
+  const searchElement = document.getElementById(searchId);
+  const resultsContainer = document.getElementById(resultsId);
+  
+  searchElement.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    resultsContainer.innerHTML = '';
+
+    // Only perform the search if there is an input value
+    if (searchTerm.trim() !== '') {
+      const results = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
+      
+      if (results.length) {
+        results.forEach(result => {
+          const resultItem = document.createElement('div');
+          resultItem.classList.add('search-result-item');
+          resultItem.innerHTML = `<a href="${result.url}">${result.title}</a>`;
+          resultsContainer.appendChild(resultItem);
+        });
+      } else {
+        const noResults = document.createElement('div');
+        noResults.classList.add('search-result-item', 'no-results');
+        noResults.innerText = 'No results found';
+        resultsContainer.appendChild(noResults);
+      }
+    }
+  });
+}
+
+// Calling performSearch for both search boxes
+performSearch('search', 'search-results');
+performSearch('search-small', 'search-results-small');
+
+
+</script>
+	
+	
+	
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  // Array of all banner image URLs
+  const sliderImages = [
+    "assets/kidney-stone-treatment-facility.png",
+      "assets/dental-care-at-stellar-health.jpg",    // Replace with your second image URL
+      "assets/eye-clinic-stellar-health.jpg",
+      "assets/full-body-checkup-stellar-health.jpg"
+  ];
+
+  // Preload all images to help with load consistency
+  sliderImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  let currentIndex = 0;
+  
+  // Get reference to the slider image element and navigation buttons
+  const sliderImageElem = document.querySelector('.banner-image');
+  const prevBtn = document.querySelector('.slider-controls button.prev');
+  const nextBtn = document.querySelector('.slider-controls button.next');
+
+  // Function to update the displayed image
+  function updateSlider() {
+    sliderImageElem.src = sliderImages[currentIndex];
+  }
+
+  // Next button event
+  nextBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % sliderImages.length;
+    updateSlider();
+  });
+
+  // Prev button event
+  prevBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + sliderImages.length) % sliderImages.length;
+    updateSlider();
+  });
+
+  // Optional: Autoplay every 5 seconds
+  setInterval(function () {
+    currentIndex = (currentIndex + 1) % sliderImages.length;
+    updateSlider();
+  }, 2000);
+
+  // Initialize the slider with the first image
+  updateSlider();
+});
+
+</script>
+	
+	<script>
+    fetch('token.php')
+      .then(response => response.text())
+      .then(token => {
+          document.getElementById('csrf_token').value = token;
+      })
+      .catch(error => console.error('Error fetching CSRF token:', error));
+  </script>
+
+	
+</body>
+</html>
+
+</body>
+</html>

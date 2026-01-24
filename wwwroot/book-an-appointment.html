@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Book An Appointment - Stellar Health</title>
+</head>
+	
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book An Appointment - Stellar Health</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+
+<script>
+    function toggleMenu() {
+        const topBarLinks = document.querySelector('.top-bar .left-links');
+        const hamburger = document.querySelector('.hamburger');
+        const isActive = topBarLinks.style.display === 'flex';
+        topBarLinks.style.display = isActive ? 'none' : 'flex';
+        hamburger.classList.toggle('active');
+    }
+
+    function toggleDropdown(event) {
+        const dropdownContent = event.target.nextElementSibling;
+        const isActive = dropdownContent.style.display === 'block';
+        dropdownContent.style.display = isActive ? 'none' : 'block';
+        const arrow = event.target.querySelector('.arrow') || event.target.parentElement.querySelector('.arrow');
+        if (arrow) {
+            arrow.textContent = isActive ? 'keyboard_arrow_down' : 'keyboard_arrow_up';
+        }
+        event.stopPropagation();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropBtns = document.querySelectorAll('.dropbtn');
+
+        dropBtns.forEach(dropBtn => {
+            dropBtn.addEventListener('click', function(event) {
+                document.querySelectorAll('.dropdown-content').forEach(content => {
+                    if (content !== dropBtn.nextElementSibling) {
+                        content.style.display = 'none';
+                        const arrow = content.previousElementSibling.querySelector('.arrow');
+                        if (arrow) {
+                            arrow.textContent = 'keyboard_arrow_down';
+                        }
+                    }
+                });
+                toggleDropdown(event);
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            document.querySelectorAll('.dropdown-content').forEach(content => {
+                if (!event.target.closest('.dropdown-content') && !event.target.closest('.dropbtn')) {
+                    content.style.display = 'none';
+                    const arrow = content.previousElementSibling.querySelector('.arrow');
+                    if (arrow) {
+                        arrow.textContent = 'keyboard_arrow_down';
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            
+        <div class="left-part">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/stellar-health-nagpur-india.png" alt="Logo">
+                </a>
+            </div>
+        </div>
+        <div class="middle-part">
+        <div class="search-container">
+  <input type="text" placeholder="Search for doctor or treatment" class="searchbox" name="search" id="search">
+  <button class="search-button">
+    <i class="material-symbols-outlined">search</i>
+  </button>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+
+    </div>
+
+       <div class="right-part">
+    <span class="helpline">
+        <i class="material-symbols-outlined">phone_in_talk</i>
+        <div class="helpline-container">
+            <span class="small-text">24x7 Helpline</span><br>
+            <span class="big-text">1800 5533 3355</span>
+        </div>
+    </span>
+</div>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+    </div>
+ 
+        <div class="top-bar">
+            <div class="left-links">
+                <a href="stellar-story.html">The Stellar Story</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				<a href="doctors.html">Our Doctors</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+                <a href="facilities.html">Our Facilities</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				<a href="services.html">Our Services</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+				
+				
+               
+                
+                <a href="health-packages.html">Health Packages</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                <a href="emergency-care.html">Emergency care</a>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            </div>
+            <div class="right-link">
+                <a href="book-an-appointment.html">
+                    Book an Appointment
+                    <span class="material-symbols-outlined">trending_flat</span>
+                </a>
+            </div>
+        </div>
+		
+		<section class="mobile-search-helpline">
+       <div class="search-container">
+    <input type="text" placeholder="Search for doctor or treatment" class="searchbox" style="font-size: 0.55rem;" name="search" id="search-small">
+    <button class="search-button">
+        <i class="material-symbols-outlined">search</i>
+    </button>
+    <div id="search-results-small" class="search-results"></div>
+</div>
+			
+			<style>
+@media (min-width: 551px) {
+    .searchbox {
+        font-size: 0.7rem !important; /* Adjust the font size as needed */
+    }
+}
+
+@media (max-width: 550px) {
+    .searchbox {
+        font-size: 0.6rem !important; /* Adjust the font size as needed */
+    }
+}
+</style>
+
+        <span class="helpline">
+            <i class="material-symbols-outlined">phone_in_talk</i>
+            <div class="helpline-container">
+                <span class="small-text">24x7 Helpline</span><br>
+                <span class="big-text">1800 5533 3355</span>
+            </div>
+        </span>
+    </section>
+    
+			
+    </header>
+	
+	<main>
+		
+	
+		<section class="content-section-doctors">
+    <div class="left-side-doctors">
+        <div class="pill-caption">BOOK YOUR APPOINTMENT</div>
+        <h1 class="headline-doctors">Experience Personalized, Efficient Service. 
+</h1>
+    </div>
+    <div class="right-side-doctors">
+        <p class="paragraph-doctors">Our appointment booking system is designed with you in mind, offering a seamless process that combines convenience with comprehensive care. Whether you need a routine check-up or specialized treatment, our dedicated team makes scheduling straightforward and personalized to your needs. Enjoy effortless booking, timely appointments, and quality service that redefines your healthcare experience.</p>
+    </div>
+</section>
+
+	
+		
+		<section class="appointment-section">
+    <form class="appointment-form" action="book_appointment.php" method="post">
+      <!-- Two-Column Layout for Appointment Form -->
+      <div class="appointment-two-col-section">
+        <!-- Left Column: Patient Information -->
+        <div class="appointment-left-col">
+          <div class="appointment-form-group">
+            <label for="app-name">Patient's Name</label>
+            <input type="text" id="app-name" name="app-name" placeholder="Enter your name" required>
+          </div>
+          <div class="appointment-form-group">
+            <label for="app-age">Patient's Age</label>
+            <input type="number" id="app-age" name="app-age" placeholder="Enter your age" required>
+          </div>
+          <div class="appointment-form-group">
+            <label for="app-sex">Sex</label>
+            <select id="app-sex" name="app-sex" required>
+              <option value="">Select Sex</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="appointment-form-group">
+            <label for="app-contact">Contact Number</label>
+            <input type="tel" id="app-contact" name="app-contact" placeholder="Enter your contact number" required>
+          </div>
+        </div>
+
+        <!-- Right Column: Appointment Details -->
+        <div class="appointment-right-col">
+          <div class="appointment-form-group full-height-group">
+            <label for="app-treatment">Treatment Details</label>
+            <textarea id="app-treatment" name="app-treatment" placeholder="Describe your treatment requirements" required></textarea>
+          </div>
+          <div class="appointment-form-group">
+            <label for="app-date">Preferred Date</label>
+            <select id="app-date" name="app-date" required>
+              <option value="">Select Date</option>
+              <!-- Date options will be added dynamically by JavaScript -->
+            </select>
+          </div>
+          <div class="appointment-form-group">
+            <label for="app-time">Preferred Time</label>
+            <select id="app-time" name="app-time" required>
+              <option value="">Select Time</option>
+              <option value="time1">9:00 AM - 10:00 AM</option>
+              <option value="time2">10:00 AM - 11:00 AM</option>
+              <option value="time3">11:00 AM - 12:00 PM</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- CSRF Token (will be populated dynamically) -->
+      <input type="hidden" name="csrf_token" id="csrf_token" value="">
+
+      <!-- Submit Button -->
+      <div class="appointment-form-group" style="text-align: center; margin-top: 1.6rem;">
+        <button type="submit" class="appointment-submit-btn">BOOK APPOINTMENT</button>
+      </div>
+    </form>
+  </section>
+
+
+
+
+
+		
+		
+		
+</main>
+
+	
+  <section id="address-bar-section">
+    <div class="address-bar-container">
+      <div class="address-bar-left">
+        <h3 class="address-bar-title">STELLAR HEALTH</h3>
+        <p class="address-bar-description">
+          Where modern care meets compassion, blending technology with human touch.
+        </p>
+      </div>
+      <div class="address-bar-right">
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Hospital Address:</h4>
+          <address>
+            30, Gurudev Nagar,<br>
+            Nandanwan, Nagpur,<br>
+            Maharashtra, India.
+          </address>
+        </div>
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Contact Details:</h4>
+          <address>
+            Email: info@stellarhospital.com<br>
+            Local: 1-514-700-0663<br>
+            Toll-Free: 1-833-213-6353
+          </address>
+        </div>
+        <div class="address-bar-office">
+          <h4 style="padding-bottom: 5px;">Hospital Timings:</h4>
+          <address>
+            Weekdays:  8:00 a.m. – 8:00 p.m.<br>
+            Saturdays:  9:00 a.m. – 2:00 p.m.<br>
+            Sundays:  Closed
+          </address>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+	
+	<footer>
+  <div class="footer-main">
+    <!-- Navigation on left -->
+    <nav class="footer-nav-links">
+      <a href="index.html" class="active">About Stellar Hospital</a>
+		
+		
+      <a href="about-us.html">Facilities</a>
+      <a href="factory.html">Health Packages</a>
+      <a href="network.html">Emergency Care</a>
+      <a href="quality.html">Download App</a>
+      <a href="certifications.html">Contact Us</a>
+		
+    </nav>
+
+    <!-- Hamburger icon for mobile (will only show on screens <900px) -->
+    <div class="footer-hamburger" onclick="toggleFooterMenu()"></div>
+
+    <!-- Logo on right -->
+    <div class="footer-logo">
+      <a href="index.html">
+        <img src="assets/stellar-health-nagpur.png" alt="Logo">
+      </a>
+    </div>
+  </div>
+	
+	<div class="footer-bar">
+			
+    <div class="footer-left">Copyright © 2025</div>
+    <div class="footer-right">All rights reserved by Stellar Health</div>
+  </div>	
+		
+		
+		
+		
+</footer>
+	
+	
+
+	<script>
+  function toggleFooterMenu() {
+    const footerNav = document.querySelector('.footer-nav-links');
+    const footerHamburger = document.querySelector('.footer-hamburger');
+    // Toggle between 'flex' and 'none'
+    const isActive = footerNav.style.display === 'flex';
+    footerNav.style.display = isActive ? 'none' : 'flex';
+    footerHamburger.classList.toggle('active');
+  }
+</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script>
+	// List of predefined pages with their titles and URLs
+const pages = [
+  { title: "Dr. Nishant S Deshpande - Nephrology", url: "doctor-nishant-nephrology.html" },
+  { title: "Dr. Nitin Shinde - Infectious Diseases & Internal Medicine   ", url: "doctor-nitin-infectious-diseases.html" },
+  { title: "General Surgery", url: "general-surgery.html" },
+  { title: "Physical Therapy", url: "physical-therapy.html" }, 
+	{ title: "Dr. Tushar Patil - Neurology", url: "doctor-tushar-neurology.html" },
+  { title: "Dr. Rashmi Shinde - Obstetric Medicine , Gynecology  and IVF   ", url: "doctor-rashmi-gynecologist.html" },
+	
+  // Add more pages here
+];
+
+function performSearch(searchId, resultsId) {
+  const searchElement = document.getElementById(searchId);
+  const resultsContainer = document.getElementById(resultsId);
+  
+  searchElement.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    resultsContainer.innerHTML = '';
+
+    // Only perform the search if there is an input value
+    if (searchTerm.trim() !== '') {
+      const results = pages.filter(page => page.title.toLowerCase().includes(searchTerm));
+      
+      if (results.length) {
+        results.forEach(result => {
+          const resultItem = document.createElement('div');
+          resultItem.classList.add('search-result-item');
+          resultItem.innerHTML = `<a href="${result.url}">${result.title}</a>`;
+          resultsContainer.appendChild(resultItem);
+        });
+      } else {
+        const noResults = document.createElement('div');
+        noResults.classList.add('search-result-item', 'no-results');
+        noResults.innerText = 'No results found';
+        resultsContainer.appendChild(noResults);
+      }
+    }
+  });
+}
+
+// Calling performSearch for both search boxes
+performSearch('search', 'search-results');
+performSearch('search-small', 'search-results-small');
+
+
+</script>
+	
+	
+	<script>
+    // Fetch the CSRF token from token.php and populate the hidden field
+    fetch('token.php')
+      .then(response => response.text())
+      .then(token => {
+        document.getElementById('csrf_token').value = token;
+      })
+      .catch(error => console.error('Error fetching CSRF token:', error));
+
+    // Dynamically populate the Preferred Date select box with the upcoming 6 days (starting tomorrow)
+    (function populateUpcomingDates() {
+      const selectDate = document.getElementById('app-date');
+      const today = new Date();
+      
+      // Loop starting at 1 to avoid including today
+      for (let i = 1; i <= 6; i++) {
+        const date = new Date();        
+        date.setDate(today.getDate() + i);
+
+        // Format the value as YYYY-MM-DD (for storing/submission)
+        const year  = date.getFullYear();
+        let month = (date.getMonth() + 1).toString().padStart(2, '0');
+        let day   = date.getDate().toString().padStart(2, '0');
+        const optionValue = `${year}-${month}-${day}`;
+
+        // Format the display text nicely, for example: "Mon, Mar 20, 2025"
+        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+        const optionText = date.toLocaleDateString('en-US', options);
+
+        const optionElement = document.createElement('option');
+        optionElement.value = optionValue;
+        optionElement.textContent = optionText;
+        selectDate.appendChild(optionElement);
+      }
+    })();
+  </script>
+
+	
+	
+	
+	
+</body>
+</html>
+
+</body>
+</html>

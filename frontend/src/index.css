@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geologica", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "El Messiri", "Graphik", "Geologica", sans-serif;
+
+  --color-primary: #004b7b;
+  --color-secondary: #009cdf;
+  --color-accent: #d0eaf2;
+  --color-dark: #003352;
+  --color-light: #f4fafd;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-dark);
+  background-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
