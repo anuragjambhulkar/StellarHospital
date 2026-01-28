@@ -8,7 +8,7 @@ const doctorsData = [
         name: "Dr. Nitin Shinde",
         specialty: "Internal Medicine & Infections",
         qualification: "MBBS, MD, (Internal Medicine), Post-Doctoral Fellowship in Infectious Diseases",
-        image: "/assets/dr-nitin-shinde.png",
+        image: "./assets/dr-nitin-shinde.png",
         availability: "10:00 AM - 04:00 PM",
         details: {
             experience: [
@@ -30,7 +30,7 @@ const doctorsData = [
         name: "Dr. Rashmi Shinde",
         specialty: "Obstetrics, Gynecology & IVF",
         qualification: "MBBS, MS (OBGY), DNB (OBGY), MRCOG, Fellowship in Obstetric Medicine & IVF",
-        image: "/assets/dr-rashmi-shinde.png",
+        image: "./assets/dr-rashmi-shinde.png",
         availability: "09:00 AM - 01:00 PM",
         details: {
             experience: [
@@ -52,7 +52,7 @@ const doctorsData = [
         name: "Dr. Nishant Deshpande",
         specialty: "Nephrology",
         qualification: "MBBS, MD, (General Medicine), Diplomate of the National Board in Nephrology",
-        image: "/assets/dr-nishant-deshpandey.png",
+        image: "./assets/dr-nishant-deshpandey.png",
         availability: "11:00 AM - 05:00 PM",
         details: {
             experience: ["Consultant Nephrologist with years of expertise", "Expert in Dialysis and Renal Transplant"],
@@ -66,7 +66,7 @@ const doctorsData = [
         name: "Dr. Tushar Patil",
         specialty: "Neurology",
         qualification: "MBBS, MD, (General Medicine), DM (Neurology), Neurocritical & Stroke Fellowship",
-        image: "/assets/dr-tushar-patil.png",
+        image: "./assets/dr-tushar-patil.png",
         availability: "02:00 PM - 07:00 PM",
         details: {
             experience: ["Neurocritical & Stroke Specialist", "Decades of clinical experience"],
@@ -80,7 +80,7 @@ const doctorsData = [
         name: "Dr. Shivani Malhotra",
         specialty: "Cardiology",
         qualification: "MBBS, MD (General Medicine), DM (Cardiology and Internal Vascular Health)",
-        image: "/assets/dr-shivani-malhotra.png",
+        image: "./assets/dr-shivani-malhotra.png",
         availability: "10:00 AM - 02:00 PM",
         details: {
             experience: ["Vascular Health Specialist", "Advanced Cardiac Interventionist"],
@@ -94,7 +94,7 @@ const doctorsData = [
         name: "Dr. Rajiv Joshi",
         specialty: "Orthopedics",
         qualification: "MBBS, MS (Orthopedics), Clinical Fellowship in Sports Medicine & Bone Care",
-        image: "/assets/dr-rajiv-joshi.png",
+        image: "./assets/dr-rajiv-joshi.png",
         availability: "04:00 PM - 08:00 PM",
         details: {
             experience: ["Specialist in Sports Injuries", "Joint Replacement Surgeon"],

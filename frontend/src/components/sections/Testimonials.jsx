@@ -9,21 +9,21 @@ const Testimonials = () => {
             role: "Nagpur",
             text: "Stellar truly lives up to its name. The doctors and staff were incredibly compassionate and attentive throughout my treatment. I cannot thank the team enough for restoring my health and peace of mind.",
             rating: 5,
-            image: "/assets/harpreet-nahar-stellar-health-patient.png"
+            image: "./assets/harpreet-nahar-stellar-health-patient.png"
         },
         {
             name: "Anita Choudhary",
             role: "Old Pune",
             text: "The state-of-the-art facilities at Stellar are outstanding. From advanced diagnostics to personalized care, everything exceeded my expectations. Made my experience seamless and reassuring.",
             rating: 5,
-            image: "/assets/anita-choudhary-stellar-health-patient.png"
+            image: "./assets/anita-choudhary-stellar-health-patient.png"
         },
         {
             name: "Meenal More",
             role: "Nagpur",
             text: "I am so grateful for the exceptional treatment I received. The doctors are knowledgeable, approachable, and dedicated to their patients' well-being. From consultation to recovery, I felt cared for at every stage.",
             rating: 5,
-            image: "/assets/meenal-more-stellar-health-patient.png"
+            image: "./assets/meenal-more-stellar-health-patient.png"
         }
     ];
 

@@ -3,18 +3,18 @@ import { motion } from 'framer-motion';
 import { Building2, Activity, Heart, Shield, Microchip, Flame, Coffee, Bed, Scissors, Microscope, Zap, MapPin } from 'lucide-react';
 
 const facilities = [
-    { title: "Outpatient Clinic", icon: <Building2 />, tags: "OPEN 24X7 • APPOINTMENTS", image: "/assets/outpatient-clinic.png" },
-    { title: "Dialysis Unit", icon: <Activity />, tags: "SESSIONS • SUPPORT • HYGIENE", image: "/assets/dialysis-unit.png" },
-    { title: "Labour Suite", icon: <Heart />, tags: "OPEN 24X7 • SAFE • PRIVATE", image: "/assets/labour-suite.png" },
-    { title: "Intensive Care Unit", icon: <Shield />, tags: "MONITORING • VENTILATORS", image: "/assets/intensive-care-unit.png" },
-    { title: "Operation Theatres", icon: <Microchip />, tags: "TECH EQUIPPED • STERILE", image: "/assets/operation-theatres.png" },
-    { title: "Clinical Laboratory", icon: <Microscope />, tags: "FAST • CERTIFIED • ACCURATE", image: "/assets/clinical-laboratory.png" },
-    { title: "CT Scan Facility", icon: <Zap />, tags: "ADVANCED • PRECISE • EFFICIENT", image: "/assets/ct-scan-facility.png" },
-    { title: "Stellar Pharmacy", icon: <Zap />, tags: "OPEN 24x7 • RELIABLE", image: "/assets/stellar-pharmacy.png" },
-    { title: "Emergency Dept.", icon: <Flame />, tags: "RAPID • CRITICAL • 24X7", image: "/assets/emergency-department.png" },
-    { title: "Physiotherapy Unit", icon: <Activity />, tags: "RECOVERY • WELLNESS", image: "/assets/phisiotherapy-unit.png" },
-    { title: "Patient Rooms", icon: <Bed />, tags: "PRIVATE • COMFORTABLE", image: "/assets/patient-rooms.png" },
-    { title: "Cafeteria", icon: <Coffee />, tags: "HEALTHY • FRESH • 24X7", image: "/assets/cafeteria.png" },
+    { title: "Outpatient Clinic", icon: <Building2 />, tags: "OPEN 24X7 • APPOINTMENTS", image: "./assets/outpatient-clinic.png" },
+    { title: "Dialysis Unit", icon: <Activity />, tags: "SESSIONS • SUPPORT • HYGIENE", image: "./assets/dialysis-unit.png" },
+    { title: "Labour Suite", icon: <Heart />, tags: "OPEN 24X7 • SAFE • PRIVATE", image: "./assets/labour-suite.png" },
+    { title: "Intensive Care Unit", icon: <Shield />, tags: "MONITORING • VENTILATORS", image: "./assets/intensive-care-unit.png" },
+    { title: "Operation Theatres", icon: <Microchip />, tags: "TECH EQUIPPED • STERILE", image: "./assets/operation-theatres.png" },
+    { title: "Clinical Laboratory", icon: <Microscope />, tags: "FAST • CERTIFIED • ACCURATE", image: "./assets/clinical-laboratory.png" },
+    { title: "CT Scan Facility", icon: <Zap />, tags: "ADVANCED • PRECISE • EFFICIENT", image: "./assets/ct-scan-facility.png" },
+    { title: "Stellar Pharmacy", icon: <Zap />, tags: "OPEN 24x7 • RELIABLE", image: "./assets/stellar-pharmacy.png" },
+    { title: "Emergency Dept.", icon: <Flame />, tags: "RAPID • CRITICAL • 24X7", image: "./assets/emergency-department.png" },
+    { title: "Physiotherapy Unit", icon: <Activity />, tags: "RECOVERY • WELLNESS", image: "./assets/phisiotherapy-unit.png" },
+    { title: "Patient Rooms", icon: <Bed />, tags: "PRIVATE • COMFORTABLE", image: "./assets/patient-rooms.png" },
+    { title: "Cafeteria", icon: <Coffee />, tags: "HEALTHY • FRESH • 24X7", image: "./assets/cafeteria.png" },
 ];
 
 const FacilitiesSection = () => {
