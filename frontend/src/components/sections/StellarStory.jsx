@@ -8,7 +8,7 @@ const StellarStory = () => {
             {/* Visual Header */}
             <div className="relative h-[60vh] overflow-hidden">
                 <img
-                    src="/assets/stellar-hospital-nagpur.png"
+                    src="./assets/stellar-hospital-nagpur.png"
                     alt="Stellar Hospital"
                     className="w-full h-full object-cover grayscale-[20%] opacity-90"
                 />

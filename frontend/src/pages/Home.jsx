@@ -24,7 +24,7 @@ const Home = () => {
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/assets/hero_bg.png"
+                        src="./assets/hero_bg.png"
                         alt="Stellar Health Interior"
                         className="h-full w-full object-cover"
                     />

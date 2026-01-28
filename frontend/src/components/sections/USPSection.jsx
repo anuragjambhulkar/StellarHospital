@@ -75,7 +75,7 @@ const USPSection = () => {
                     >
                         <div className="rounded-[4rem] overflow-hidden shadow-2xl shadow-primary/10">
                             <img
-                                src="/assets/super-speciality-hospital-stellar-health.png"
+                                src="./assets/super-speciality-hospital-stellar-health.png"
                                 alt="Modern Medical Team"
                                 className="w-full h-auto"
                             />

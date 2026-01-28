@@ -55,7 +55,7 @@ const Header = () => {
                     <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                         <div className="h-10 w-10 rounded-xl overflow-hidden shadow-inner bg-primary/5 flex items-center justify-center">
                             <video
-                                src="/assets/logoanimation.mp4"
+                                src="./assets/logoanimation.mp4"
                                 autoPlay
                                 loop
                                 muted
