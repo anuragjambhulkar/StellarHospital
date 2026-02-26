@@ -1,96 +1,121 @@
 import React from 'react';
-import { Check, ShieldCheck, Zap, Crown } from 'lucide-react';
+import { Check, Minus, ShieldCheck, Zap, Crown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SubscriptionPlans = () => {
     const plans = [
         {
-            name: "Silver",
+            name: "Copper",
             price: "₹1,499",
             period: "per month",
-            icon: <ShieldCheck className="text-secondary" size={32} />,
-            features: [
-                "10% Flat Discount on All Services",
-                "Basic Annual Health Checkup",
-                "Priority Access to Support",
-                "Personalized Health Tips"
-            ],
-            color: "bg-white border-primary/10"
+            icon: <ShieldCheck className="text-secondary mb-2" size={28} />,
+            color: "bg-white",
+            headerClass: "text-dark"
         },
         {
-            name: "Gold",
+            name: "Silver",
             price: "₹2,499",
             period: "per month",
-            icon: <Zap className="text-secondary" size={32} />,
-            features: [
-                "15% Flat Discount on All Services",
-                "Full Body Advanced Screening",
-                "Complimentary Health Workshops",
-                "Priority Appointment Scheduling",
-                "Dedicated Health Manager"
-            ],
-            color: "bg-accent/30 border-secondary/30",
+            icon: <Zap className="text-primary mb-2" size={28} />,
+            color: "bg-accent/15",
+            headerClass: "text-primary",
             featured: true
         },
         {
-            name: "Platinum",
+            name: "Gold",
             price: "₹4,999",
             period: "per month",
-            icon: <Crown className="text-yellow-500" size={32} />,
-            features: [
-                "25% Flat Discount on All Services",
-                "Elite Executive Health Audit",
-                "Unlimited Specialist Consultations",
-                "24/7 Concierge Support",
-                "Home Diagnostics & Sample Collection",
-                "Luxury Suite Patient Upgrades"
-            ],
-            color: "bg-primary text-white border-primary",
-            textColor: "text-white"
+            icon: <Crown className="text-yellow-400 mb-2" size={28} />,
+            color: "bg-primary text-white",
+            headerClass: "text-white"
         }
     ];
 
+    const features = [
+        { name: "Consultation", availability: [true, true, true] },
+        { name: "Lab Test", availability: [true, true, true] },
+        { name: "Radiology", availability: [false, true, true] },
+        { name: "OT", availability: [false, false, true] },
+        { name: "Pharmacy", availability: [true, true, true] },
+        { name: "Inpatient charges*", availability: [false, true, true] }
+    ];
 
     return (
         <section className="py-24 bg-light" id="subscriptions">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-4 sm:px-6">
                 <div className="text-center mb-16">
-                    <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4">Stellar Care Plans</h2>
+                    <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4">What happens when you join Stellar Membership</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">Choose a membership plan designed to provide you and your family with sustainable, high-priority healthcare excellence.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {plans.map((plan, idx) => (
-                        <motion.div
-                            key={idx}
-                            whileHover={{ y: -10 }}
-                            className={`p-10 rounded-[2.5rem] border flex flex-col ${plan.color} ${plan.textColor || 'text-dark'} shadow-sm hover:shadow-2xl transition-all relative overflow-hidden`}
-                        >
-                            {plan.featured && (
-                                <div className="absolute top-0 right-0 bg-secondary text-white px-6 py-1 rounded-bl-2xl text-xs font-bold uppercase tracking-widest">Most Popular</div>
-                            )}
-
-                            <div className="mb-8">{plan.icon}</div>
-                            <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                            <div className="flex items-baseline gap-1 mb-8">
-                                <span className="text-4xl font-bold">{plan.price}</span>
-                                <span className={`text-sm ${plan.textColor ? 'text-blue-100' : 'text-gray-500'}`}>{plan.period}</span>
-                            </div>
-
-                            <ul className="space-y-4 mb-10 flex-grow">
-                                {plan.features.map((feature, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-sm">
-                                        <Check size={18} className={plan.textColor ? 'text-secondary' : 'text-primary'} />
-                                        <span className={plan.textColor ? 'text-blue-50' : 'text-gray-600'}>{feature}</span>
-                                    </li>
+                <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+                    <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse min-w-[700px]">
+                            <thead>
+                                <tr>
+                                    <th className="p-8 border-b border-gray-100 bg-gray-50/50 w-1/4 align-bottom">
+                                        <span className="text-xl font-bold text-primary">Features & Benefits</span>
+                                    </th>
+                                    {plans.map((plan, idx) => (
+                                        <th key={idx} className={`p-8 border-b border-gray-100 ${plan.color} relative text-center w-1/4 align-bottom`}>
+                                            {plan.featured && (
+                                                <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-secondary text-white px-4 py-1 rounded-b-xl text-[10px] font-bold uppercase tracking-widest shadow-md">
+                                                    Most Popular
+                                                </div>
+                                            )}
+                                            <div className="flex flex-col items-center justify-center mt-6">
+                                                {plan.icon}
+                                                <h3 className={`text-2xl font-display font-bold mb-1 ${plan.headerClass}`}>{plan.name}</h3>
+                                                <div className="flex items-baseline justify-center gap-1">
+                                                    <span className="text-3xl font-bold">{plan.price}</span>
+                                                    <span className={`text-xs ${idx === 2 ? 'opacity-80' : 'text-gray-500'}`}>{plan.period}</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {features.map((feature, idx) => (
+                                    <tr key={idx} className="hover:bg-gray-50/20 transition-colors">
+                                        <td className="p-6 border-b border-gray-100 font-semibold text-gray-700 pl-8">
+                                            {feature.name}
+                                        </td>
+                                        {feature.availability.map((isAvailable, colIdx) => (
+                                            <td key={colIdx} className={`p-6 border-b border-gray-100 text-center ${plans[colIdx].color}`}>
+                                                {isAvailable ? (
+                                                    <Check size={24} className={`mx-auto ${colIdx === 2 ? 'text-secondary' : 'text-primary'}`} />
+                                                ) : (
+                                                    <Minus size={24} className={`mx-auto ${colIdx === 2 ? 'text-white/30' : 'text-gray-300'}`} />
+                                                )}
+                                            </td>
+                                        ))}
+                                    </tr>
                                 ))}
-                            </ul>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td className="p-8 bg-gray-50/50 border-t border-gray-100"></td>
+                                    {plans.map((plan, idx) => (
+                                        <td key={idx} className={`p-8 text-center ${plan.color}`}>
+                                            <button className={`w-full py-4 px-6 rounded-xl font-bold transition-transform hover:scale-105 shadow-md ${idx === 2 ? 'bg-white text-primary hover:bg-gray-50' : idx === 1 ? 'bg-primary text-white hover:bg-primary/90' : 'bg-primary text-white hover:bg-primary/90'}`}>
+                                                Choose {plan.name}
+                                            </button>
+                                        </td>
+                                    ))}
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
 
-                            <button className={`w-full py-4 rounded-xl font-bold transition-all ${plan.textColor ? 'bg-secondary text-white hover:bg-white hover:text-primary' : 'bg-primary text-white hover:bg-primary/90'}`}>
-                                Choose {plan.name}
-                            </button>
-                        </motion.div>
-                    ))}
+                <div className="mt-16 flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-bold shadow-xl shadow-primary/20 transition-transform hover:-translate-y-1 active:scale-95">
+                        Book a Health Citizenship
+                    </button>
+                    <button className="bg-white hover:bg-accent/30 text-primary border border-primary/20 px-8 py-4 rounded-full text-lg font-bold shadow-lg shadow-gray-200/50 transition-transform hover:-translate-y-1 active:scale-95">
+                        Book a lab test
+                    </button>
                 </div>
             </div>
         </section>

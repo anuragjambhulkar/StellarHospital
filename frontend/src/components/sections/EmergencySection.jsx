@@ -105,7 +105,7 @@ const EmergencySection = () => {
                                 <textarea className="w-full bg-white/10 border-none rounded-2xl py-4 px-6 text-white placeholder:text-secondary/50 focus:ring-2 focus:ring-secondary/50 outline-none min-h-[120px]" placeholder="Briefly describe the emergency..."></textarea>
                             </div>
                             <button type="submit" className="w-full bg-secondary hover:bg-white hover:text-primary py-5 rounded-2xl text-lg font-bold transition-all flex items-center justify-center gap-3 mt-4">
-                                Secure Priority Slot <ArrowRight size={20} />
+                                Emergency Video Consultation <ArrowRight size={20} />
                             </button>
                         </form>
                     </motion.div>

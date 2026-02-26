@@ -39,13 +39,12 @@ const Home = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="space-y-8"
                     >
-                        <h1 className="font-display text-6xl md:text-8xl font-bold tracking-tight text-primary leading-[1.1]">
-                            Healthcare <br />
-                            <span className="text-dark">Reimagined.</span>
+                        <h1 className="font-display font-bold tracking-tight text-primary leading-[1.1]">
+                            <span className="block text-6xl md:text-8xl mb-3">Privilege Care</span>
+                            <span className="block text-dark text-4xl md:text-5xl opacity-80">just a membership away.</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-600 max-w-lg leading-relaxed">
-                            Experience the future of wellness with Stellar Health.
-                            Advanced diagnostics, expert care, and a patient-first approach.
+                            Good Health has no limits
                         </p>
 
                         <div className="flex flex-wrap gap-4 pt-4">
@@ -56,7 +55,7 @@ const Home = () => {
                                 onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
                                 className="bg-white hover:bg-accent/30 text-primary border border-primary/10 px-8 py-4 rounded-full text-lg font-bold transition-transform hover:scale-105"
                             >
-                                Book Consultation
+                                Emergency Video Consultation
                             </button>
                         </div>
                     </motion.div>
@@ -88,14 +87,14 @@ const Home = () => {
             </section>
 
             <StellarStory />
-            <USPSection />
-            <ServicesSection />
-            <FacilitiesSection />
+            <Testimonials />
+            {/* <USPSection /> */}
             <SubscriptionPlans />
             <DoctorsSection />
+            <ServicesSection />
+            <FacilitiesSection />
             <EmergencySection />
             <AppointmentSection />
-            <Testimonials />
             <ContactSection />
             <AddressBar />
         </div>

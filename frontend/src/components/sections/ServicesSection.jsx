@@ -1,20 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Activity, Shield, Activity as Lung, Stethoscope, Baby, FlaskConical, Brain, Eye, User, Sparkles, Ear } from 'lucide-react';
+import { Heart, Activity, Shield, Stethoscope, Baby, FlaskConical, Brain, Eye, User, Sparkles, Ear, Thermometer, Bone, Smile, Layers } from 'lucide-react';
 
 const services = [
     { title: "Cardiac Care", desc: "Expert assessment and prompt diagnostics for sustained heart health and renewed vitality.", icon: <Heart /> },
-    { title: "Breast Care", desc: "Advanced imaging technologies deliver precise screening and early detection for women of all ages.", icon: <Sparkles /> },
+    //{ title: "Breast Care", desc: "Advanced imaging technologies deliver precise screening and early detection for women of all ages.", icon: <Sparkles /> },
     { title: "Prostate Care", desc: "State-of-the-art diagnostic tools and proactive screening for improved well-being.", icon: <Shield /> },
-    { title: "Pain Management", desc: "Holistic therapies targeting discomfort at its source while promoting lasting healing.", icon: <Activity /> },
-    { title: "Diabetes Control", desc: "Integrated monitoring and targeted interventions for optimal blood sugar management.", icon: <Lung /> },
-    { title: "Pediatric Care", desc: "Nurturing support and early intervention for holistic child development.", icon: <Baby /> },
-    { title: "Ortho Services", desc: "Innovative interventions for joint, bone, and soft tissue conditions to restore mobility.", icon: <Stethoscope /> },
-    { title: "Women's Care", desc: "Personalized wellness strategies addressing unique needs at every stage of life.", icon: <User /> },
-    { title: "Oncology", desc: "Breakthrough diagnostic technologies and individualized treatment strategies for targeted care.", icon: <FlaskConical /> },
-    { title: "Dental Care", desc: "Comprehensive solutions for lasting oral wellness and vibrant confidence.", icon: <Sparkles /> },
-    { title: "Nephrology", desc: "Advanced renal diagnostics and management for overall kidney wellness.", icon: <FlaskConical /> },
-    { title: "Mental Health", desc: "Integrated empathy and innovative therapies for emotional and psychological needs.", icon: <Brain /> },
+    { title: "Fever & Injection", desc: "Prompt evaluation and effective treatment for sudden illnesses, fevers, and necessary vaccinations.", icon: <Thermometer /> },
+    { title: "Diabetic Care", desc: "Comprehensive management plans and targeted interventions for optimal blood sugar control.", icon: <Activity /> },
+    { title: "Pediatric Care", desc: "Nurturing support, routine checkups, and specialized care for the holistic development of children.", icon: <Baby /> },
+    { title: "Ortho Services", desc: "Innovative interventions for joint, bone, and soft tissue conditions to restore mobility and strength.", icon: <Bone /> },
+    { title: "Women Health", desc: "Personalized wellness strategies and comprehensive gynecological care for every stage of life.", icon: <User /> },
+    { title: "Metabolic Care", desc: "Targeted strategies and expert guidance for diagnosing and managing metabolic disorders.", icon: <FlaskConical /> },
+    { title: "Dental Care", desc: "Comprehensive solutions for lasting oral wellness, hygiene, and a vibrant confident smile.", icon: <Smile /> },
+    { title: "Kidney Health", desc: "Advanced renal diagnostics and management for overall kidney function and long-term wellness.", icon: <FlaskConical /> },
+    { title: "Mental Health", desc: "Compassionate support and therapeutic strategies for emotional, psychological, and behavioral well-being.", icon: <Brain /> },
+    { title: "Brain Health", desc: "Expert neurological care and advanced treatment plans for optimal cognitive health and recovery.", icon: <Brain /> },
+    { title: "Others", desc: "A wide spectrum of specialized medical services tailored to address unique and varied healthcare needs.", icon: <Layers /> },
 ];
 
 const ServicesSection = () => {
@@ -23,7 +25,7 @@ const ServicesSection = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Unmatched Infrastructure</span>
-                    <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">Elevate Your Experience with <br /><span className="text-dark">Transformative Healthcare</span></h2>
+                    <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">So , How can we help you <br /><span className="text-dark">Today</span></h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
