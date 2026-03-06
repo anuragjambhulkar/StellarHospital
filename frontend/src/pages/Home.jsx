@@ -55,7 +55,7 @@ const Home = () => {
                             </h1>
 
                             {/* Download App Redesign */}
-                            <button className="hidden sm:flex items-center gap-3 bg-gradient-to-br from-primary to-primary/80 hover:to-primary text-white px-8 py-3.5 rounded-[24px] text-[10px] font-black uppercase tracking-[0.2em] shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95 group">
+                            <button className="flex items-center gap-3 bg-gradient-to-br from-primary to-primary/80 hover:to-primary text-white px-8 py-3.5 rounded-[24px] text-[10px] font-black uppercase tracking-[0.2em] shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95 group mt-4">
                                 Download App
                                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                             </button>
