@@ -220,8 +220,8 @@ const DoctorsSection = () => {
                         <h2 className="font-display text-5xl md:text-6xl font-bold text-primary">Meet Our Expert <br /><span className="text-dark">Medical Specialists</span></h2>
                     </div>
 
-                    <div className="flex flex-wrap gap-4 bg-white p-3 rounded-[2rem] shadow-xl shadow-primary/5 border border-gray-100 w-full md:w-auto">
-                        <div className="relative flex-grow md:flex-grow-0">
+                    <div className="flex flex-wrap gap-4 bg-white p-3 rounded-[2rem] shadow-xl shadow-primary/5 border border-gray-100 w-full md:w-auto text-dark">
+                        <div className="relative flex-grow md:flex-grow-0 min-w-[280px] lg:min-w-[320px]">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                             <input
                                 type="text"
