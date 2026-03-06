@@ -5,19 +5,34 @@ import { motion } from 'framer-motion';
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [hoveredLink, setHoveredLink] = useState(null);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
+            const currentScrollY = window.scrollY;
+
+            // Scrolled state for background change
+            setScrolled(currentScrollY > 20);
+
+            // Hide/Show logic
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setIsVisible(false); // Scrolling down - Hide
+            } else {
+                setIsVisible(true); // Scrolling up - Show
+            }
+
+            setLastScrollY(currentScrollY);
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [lastScrollY]);
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
-            const offset = 80; // Header height offset
+            const offset = 80;
             const bodyRect = document.body.getBoundingClientRect().top;
             const elementRect = element.getBoundingClientRect().top;
             const elementPosition = elementRect - bodyRect;
@@ -44,16 +59,17 @@ const Header = () => {
 
     return (
         <header
-            className="fixed top-6 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-10 pointer-events-none"
+            className={`fixed top-0 left-0 right-0 z-50 pointer-events-none transition-transform duration-500 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
         >
-            <div className="mx-auto max-w-[1400px] flex items-center justify-between">
-
-                {/* Left Logo Container - Pointer events auto */}
-                <div
+            <div className="mx-auto max-w-[1500px] pt-6 px-6 lg:px-10 flex items-start justify-between">
+                {/* 1. Floating Logo Card */}
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className={`pointer-events-auto flex items-center gap-5 cursor-pointer p-2 pr-6 rounded-2xl transition-all duration-300 origin-left ${scrolled ? 'bg-white/90 shadow-lg backdrop-blur-xl border border-white/40 scale-95' : 'bg-transparent scale-100 hover:scale-[1.02]'}`}
+                    className={`pointer-events-auto flex items-center gap-4 cursor-pointer p-3 rounded-[32px] transition-all duration-500 origin-left border shadow-2xl ${scrolled ? 'bg-white/95 backdrop-blur-2xl border-white/40 scale-90 translate-y-[-5px]' : 'bg-white/80 backdrop-blur-xl border-white/20 scale-100'}`}
                 >
-                    <div className="h-[76px] w-[76px] shrink-0 rounded-2xl overflow-hidden shadow-inner bg-primary flex items-center justify-center p-[2px]">
+                    <div className="h-12 w-12 md:h-14 md:w-14 rounded-2xl overflow-hidden shadow-2xl bg-primary flex items-center justify-center p-[2px] ring-4 ring-primary/5">
                         <video
                             src="./assets/logoanimation.mp4"
                             autoPlay
@@ -63,59 +79,93 @@ const Header = () => {
                             className="h-full w-full object-cover scale-[1.3] rounded-xl"
                         />
                     </div>
-                    <div className="font-display font-bold transition-all hidden sm:flex flex-col leading-[1.05]">
-                        <span className="text-[32px] tracking-tight text-primary">Stellar</span>
-                        <span className="text-[32px] tracking-tight text-secondary">Health</span>
+                    <div className="hidden sm:flex flex-col leading-none pr-4">
+                        <span className="text-2xl font-display font-black tracking-tighter text-primary">Stellar</span>
+                        <span className="text-2xl font-display font-black tracking-tighter text-secondary">Health</span>
                     </div>
-                </div>
+                </motion.div>
 
-                {/* Center Nav Container - distinct pill */}
-                <nav className={`pointer-events-auto hidden lg:flex items-center gap-7 px-8 py-4 rounded-full transition-all duration-300 shadow-sm ${scrolled ? 'bg-white/90 shadow-lg backdrop-blur-xl border border-white/40' : 'bg-white/70 backdrop-blur-md border border-white/20'}`}>
-                    {navLinks.map((link) => (
-                        <button
-                            key={link.id}
-                            onClick={() => scrollToSection(link.id)}
-                            className="text-[13px] font-bold text-slate-700 hover:text-primary transition-colors uppercase tracking-[0.1em]"
-                        >
-                            {link.name}
-                        </button>
-                    ))}
-                </nav>
-
-                {/* Right CTA Container */}
-                <div className="pointer-events-auto flex items-center gap-4">
-                    <button className="hidden xl:flex bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-[24px] text-sm font-bold shadow-lg shadow-primary/30 transition-all hover:-translate-y-1 active:scale-95 text-center leading-tight">
-                        Download<br />App
-                    </button>
-                    <button
-                        className={`md:hidden p-3 rounded-2xl transition-all ${scrolled ? 'bg-white/90 shadow-lg text-primary' : 'bg-white/50 text-gray-700 backdrop-blur-md'}`}
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                {/* 2. Right Floating Group */}
+                <div className="flex flex-col items-end gap-5">
+                    {/* Modular Nav Pill */}
+                    <motion.nav
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        className={`pointer-events-auto hidden lg:flex items-center relative rounded-full px-2 py-2 border shadow-2xl transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-2xl border-white/50 py-1.5' : 'bg-white/80 backdrop-blur-xl border-white/20'}`}
                     >
-                        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
+                        {navLinks.map((link) => (
+                            <button
+                                key={link.id}
+                                onMouseEnter={() => setHoveredLink(link.id)}
+                                onMouseLeave={() => setHoveredLink(null)}
+                                onClick={() => scrollToSection(link.id)}
+                                className={`relative z-10 px-5 py-2.5 text-[11px] font-black transition-colors duration-300 uppercase tracking-widest ${hoveredLink === link.id ? 'text-white' : 'text-slate-600'}`}
+                            >
+                                {/* THE "TRANSACTION" SLIDING PILL */}
+                                {hoveredLink === link.id && (
+                                    <motion.div
+                                        layoutId="navHoverBackground"
+                                        className="absolute inset-0 bg-primary rounded-full -z-10 shadow-lg"
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                                    />
+                                )}
+                                {link.name}
+                            </button>
+                        ))}
+                    </motion.nav>
+
+                    {/* Premium Actions Group */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="pointer-events-auto flex items-center gap-4"
+                    >
+                        {/* Emergency Glass Card */}
+                        <button
+                            onClick={() => scrollToSection('booking')}
+                            className={`hidden lg:flex items-center gap-3 px-7 py-3 rounded-[24px] text-[10px] font-black uppercase tracking-[0.15em] transition-all duration-500 border shadow-2xl group relative overflow-hidden ${scrolled ? 'bg-secondary text-primary border-primary/10' : 'bg-white/90 text-primary border-primary/5'}`}
+                        >
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary group-hover:bg-primary transition-colors"></span>
+                            </span>
+                            Emergency Consultation
+                        </button>
+
+
+
+                        <button
+                            className="lg:hidden p-4 rounded-2xl bg-white shadow-2xl text-primary border border-white/20"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        >
+                            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </motion.div>
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="md:hidden border-t border-gray-100 p-6 space-y-4 bg-white/95 backdrop-blur-xl rounded-b-2xl shadow-xl"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="lg:hidden pointer-events-auto fixed inset-x-6 top-24 p-8 bg-white/95 backdrop-blur-2xl border border-white/20 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] rounded-[40px]"
                 >
-                    {navLinks.map((link) => (
-                        <button
-                            key={link.id}
-                            onClick={() => scrollToSection(link.id)}
-                            className="block w-full text-left font-bold text-primary py-3 border-b border-gray-50 flex items-center justify-between group"
-                        >
-                            {link.name}
-                            <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </button>
-                    ))}
-                    <button className="w-full bg-primary text-white py-4 rounded-xl font-bold mt-4 shadow-lg shadow-primary/20">
-                        Download App
-                    </button>
+                    <div className="grid grid-cols-2 gap-4">
+                        {navLinks.map((link) => (
+                            <button
+                                key={link.id}
+                                onClick={() => scrollToSection(link.id)}
+                                className="px-6 py-5 text-left font-bold text-primary bg-gray-50/50 rounded-2xl flex items-center justify-between group"
+                            >
+                                <span className="text-xs uppercase tracking-widest">{link.name}</span>
+                                <ArrowRight size={14} />
+                            </button>
+                        ))}
+                    </div>
                 </motion.div>
             )}
         </header >

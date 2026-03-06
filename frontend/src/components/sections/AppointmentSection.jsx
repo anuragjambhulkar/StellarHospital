@@ -4,6 +4,11 @@ import { Calendar, Clock, User, Phone, ClipboardList, Send } from 'lucide-react'
 
 const AppointmentSection = () => {
     const [dates, setDates] = useState([]);
+    const [formData, setFormData] = useState({
+        sex: '',
+        date: '',
+        time: ''
+    });
 
     useEffect(() => {
         const upcomingDates = [];
@@ -18,6 +23,11 @@ const AppointmentSection = () => {
         }
         setDates(upcomingDates);
     }, []);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
 
     return (
         <section className="py-24 bg-white overflow-hidden" id="booking">
@@ -69,21 +79,37 @@ const AppointmentSection = () => {
                                         <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Patient's Name</label>
                                         <div className="relative">
                                             <User className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                            <input type="text" className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-dark placeholder:text-gray-300 focus:ring-2 focus:ring-primary/20 outline-none shadow-sm" placeholder="Enter Full Name" required />
+                                            <input
+                                                type="text"
+                                                className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-dark placeholder:text-gray-400/70 placeholder:font-medium focus:ring-2 focus:ring-primary/20 outline-none shadow-sm font-medium"
+                                                placeholder="Enter Full Name"
+                                                required
+                                            />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
                                             <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Age</label>
-                                            <input type="number" className="w-full bg-white border-none rounded-2xl py-4 px-6 text-dark placeholder:text-gray-300 focus:ring-2 focus:ring-primary/20 outline-none shadow-sm" placeholder="Age" required />
+                                            <input
+                                                type="number"
+                                                className="w-full bg-white border-none rounded-2xl py-4 px-6 text-dark placeholder:text-gray-400/70 placeholder:font-medium focus:ring-2 focus:ring-primary/20 outline-none shadow-sm font-medium"
+                                                placeholder="Age"
+                                                required
+                                            />
                                         </div>
                                         <div className="space-y-2">
                                             <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Sex</label>
-                                            <select className="w-full bg-white border-none rounded-2xl py-4 px-6 text-dark focus:ring-2 focus:ring-primary/20 outline-none shadow-sm appearance-none" required>
-                                                <option value="">Sex</option>
-                                                <option>Male</option>
-                                                <option>Female</option>
-                                                <option>Other</option>
+                                            <select
+                                                name="sex"
+                                                value={formData.sex}
+                                                onChange={handleChange}
+                                                className={`w-full bg-white border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 outline-none shadow-sm appearance-none font-medium transition-colors ${formData.sex ? 'text-dark' : 'text-gray-400/70'}`}
+                                                required
+                                            >
+                                                <option value="" disabled>Sex</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
                                     </div>
@@ -94,8 +120,14 @@ const AppointmentSection = () => {
                                         <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Preferred Date</label>
                                         <div className="relative">
                                             <Calendar className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                            <select className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-dark focus:ring-2 focus:ring-primary/20 outline-none shadow-sm appearance-none" required>
-                                                <option value="">Select Date</option>
+                                            <select
+                                                name="date"
+                                                value={formData.date}
+                                                onChange={handleChange}
+                                                className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-10 focus:ring-2 focus:ring-primary/20 outline-none shadow-sm appearance-none font-medium transition-colors ${formData.date ? 'text-dark' : 'text-gray-400/70'}`}
+                                                required
+                                            >
+                                                <option value="" disabled>Select Date</option>
                                                 {dates.map(date => (
                                                     <option key={date.value} value={date.value}>{date.label}</option>
                                                 ))}
@@ -106,12 +138,18 @@ const AppointmentSection = () => {
                                         <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Preferred Time</label>
                                         <div className="relative">
                                             <Clock className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
-                                            <select className="w-full bg-white border-none rounded-2xl py-4 pl-14 pr-6 text-dark focus:ring-2 focus:ring-primary/20 outline-none shadow-sm appearance-none" required>
-                                                <option value="">Select Time Slot</option>
-                                                <option>9:00 AM - 10:00 AM</option>
-                                                <option>10:00 AM - 11:00 AM</option>
-                                                <option>11:00 AM - 12:00 PM</option>
-                                                <option>02:00 PM - 05:00 PM</option>
+                                            <select
+                                                name="time"
+                                                value={formData.time}
+                                                onChange={handleChange}
+                                                className={`w-full bg-white border-none rounded-2xl py-4 pl-14 pr-10 focus:ring-2 focus:ring-primary/20 outline-none shadow-sm appearance-none font-medium transition-colors ${formData.time ? 'text-dark' : 'text-gray-400/70'}`}
+                                                required
+                                            >
+                                                <option value="" disabled>Select Time Slot</option>
+                                                <option value="9-10">9:00 AM - 10:00 AM</option>
+                                                <option value="10-11">10:00 AM - 11:00 AM</option>
+                                                <option value="11-12">11:00 AM - 12:00 PM</option>
+                                                <option value="14-17">02:00 PM - 05:00 PM</option>
                                             </select>
                                         </div>
                                     </div>
@@ -121,7 +159,11 @@ const AppointmentSection = () => {
                                     <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Treatment Details</label>
                                     <div className="relative">
                                         <ClipboardList className="absolute left-6 top-6 text-gray-400" size={18} />
-                                        <textarea className="w-full bg-white border-none rounded-[2rem] py-5 pl-14 pr-6 text-dark placeholder:text-gray-300 focus:ring-2 focus:ring-primary/20 outline-none shadow-sm min-h-[120px]" placeholder="Briefly describe your medical requirement..." required></textarea>
+                                        <textarea
+                                            className="w-full bg-white border-none rounded-[2rem] py-5 pl-14 pr-6 text-dark placeholder:text-gray-400/70 placeholder:font-medium focus:ring-2 focus:ring-primary/20 outline-none shadow-sm min-h-[120px] font-medium"
+                                            placeholder="Briefly describe your medical requirement..."
+                                            required
+                                        ></textarea>
                                     </div>
                                 </div>
 
