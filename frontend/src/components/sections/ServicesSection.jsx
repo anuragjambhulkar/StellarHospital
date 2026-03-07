@@ -25,7 +25,7 @@ const ServicesSection = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Unmatched Infrastructure</span>
-                    <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">So , How can we help you <br /><span className="text-dark">today?</span></h2>
+                    <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">So , How can we help you <br /><span className="text-dark">today</span></h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
