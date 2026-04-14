@@ -86,26 +86,26 @@ const ContactSection = () => {
                                 ></textarea>
                             </div>
                             <button className="w-full bg-primary hover:bg-secondary text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95 group">
-                                Send Message
+                                Contact Us
                                 <Send size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
                         </form>
 
                         <div className="mt-12 pt-12 border-t border-primary/5 grid grid-cols-2 gap-8 text-center">
-                            <div>
-                                <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-primary mx-auto mb-4 border border-secondary/20">
+                            <a href="tel:180055333355" className="block group cursor-pointer hover:scale-105 transition-transform">
+                                <div className="w-12 h-12 bg-secondary/10 group-hover:bg-primary group-hover:text-white rounded-2xl flex items-center justify-center text-primary mx-auto mb-4 border border-secondary/20 transition-colors">
                                     <Phone size={24} />
                                 </div>
                                 <div className="font-bold text-dark">Call Us</div>
-                                <div className="text-gray-500 text-sm">1800 5533 3355</div>
-                            </div>
-                            <div>
-                                <div className="w-12 h-12 bg-secondary/10 rounded-2xl flex items-center justify-center text-primary mx-auto mb-4 border border-secondary/20">
+                                <div className="text-gray-500 text-sm group-hover:text-primary transition-colors">Click to dial</div>
+                            </a>
+                            <a href="mailto:info@stellar.com" className="block group cursor-pointer hover:scale-105 transition-transform">
+                                <div className="w-12 h-12 bg-secondary/10 group-hover:bg-primary group-hover:text-white rounded-2xl flex items-center justify-center text-primary mx-auto mb-4 border border-secondary/20 transition-colors">
                                     <MessageSquare size={24} />
                                 </div>
                                 <div className="font-bold text-dark">Support</div>
-                                <div className="text-gray-500 text-sm">info@stellar.com</div>
-                            </div>
+                                <div className="text-gray-500 text-sm group-hover:text-primary transition-colors">Email us</div>
+                            </a>
                         </div>
                     </motion.div>
                 </div>

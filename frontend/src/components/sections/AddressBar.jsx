@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail, Briefcase } from 'lucide-react';
 
 const AddressBar = () => {
     return (
@@ -9,10 +9,10 @@ const AddressBar = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                    <div className="lg:col-span-4 space-y-6">
+                    <div className="lg:col-span-4 space-y-4">
                         <h2 className="font-display text-4xl font-bold">STELLAR HEALTH</h2>
-                        <p className="text-secondary text-lg leading-relaxed max-w-sm font-medium">
-                            Where modern care meets compassion, blending technology with human touch.
+                        <p className="text-secondary text-3xl lg:text-4xl font-display italic font-light tracking-wide">
+                            Good Health has no limits
                         </p>
                     </div>
 
@@ -46,23 +46,23 @@ const AddressBar = () => {
                             </div>
                         </div>
 
-                        {/* Quick Links */}
+                        {/* Career */}
                         <div className="space-y-6">
                             <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-secondary invisible md:visible">
-                                <Clock size={20} />
+                                <Briefcase size={20} />
                             </div>
                             <div className="space-y-3">
-                                <h4 className="font-bold text-sm text-white uppercase tracking-wider">Services</h4>
+                                <h4 className="font-bold text-sm text-white uppercase tracking-wider">Careers</h4>
                                 <div className="flex flex-col gap-2 text-xs text-blue-50">
-                                    <a href="#emergency" className="hover:text-secondary transition-colors">Emergency</a>
-                                    <a href="#services" className="hover:text-secondary transition-colors">Medical Services</a>
-                                    <a href="#facilities" className="hover:text-secondary transition-colors">Facilities</a>
+                                    <a href="#careers" className="hover:text-secondary transition-colors">Job Openings</a>
+                                    <a href="#internships" className="hover:text-secondary transition-colors">Internships</a>
+                                    <a href="#working-at-stellar" className="hover:text-secondary transition-colors">Working at Stellar</a>
                                 </div>
                             </div>
                         </div>
 
                         {/* Support */}
-                        <div className="space-y-6">
+                        {/* <div className="space-y-6">
                             <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-secondary invisible md:visible">
                                 <Clock size={20} />
                             </div>
@@ -74,7 +74,7 @@ const AddressBar = () => {
                                     <a href="#contact" className="hover:text-secondary transition-colors">Contact Us</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 

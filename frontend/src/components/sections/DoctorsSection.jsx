@@ -191,7 +191,7 @@ const DoctorCard = ({ doctor }) => {
                 </AnimatePresence>
 
                 <button className="w-full bg-primary text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-secondary transition-all shadow-lg shadow-primary/10">
-                    Book Appointment
+                    Book An Appointment
                 </button>
             </div>
         </motion.div>
@@ -216,8 +216,8 @@ const DoctorsSection = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <div className="max-w-xl">
-                        <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Care Beyond Boundaries</span>
-                        <h2 className="font-display text-5xl md:text-6xl font-bold text-primary">Meet Our Expert <br /><span className="text-dark">Medical Specialists</span></h2>
+                        {/* <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Care Beyond Boundaries</span> */}
+                        <h2 className="font-display text-5xl md:text-6xl font-bold text-primary">Meet Our Experts <br /></h2>
                     </div>
 
                     <div className="flex flex-wrap gap-4 bg-white p-3 rounded-[2rem] shadow-xl shadow-primary/5 border border-gray-100 w-full md:w-auto text-dark">

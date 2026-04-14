@@ -42,8 +42,8 @@ const Home = () => {
                             className="flex flex-col items-center gap-6"
                         >
                             {/* Tagline Badge */}
-                            <div className="inline-flex items-center gap-2 bg-primary/5 text-primary border border-primary/20 px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.2em] uppercase backdrop-blur-sm shadow-sm">
-                                <Activity size={16} className="animate-pulse" />
+                            <div className="inline-flex items-center gap-3 bg-primary/5 text-primary border border-primary/20 px-6 py-3 rounded-full text-lg md:text-xl italic font-semibold backdrop-blur-sm shadow-sm">
+                                <Activity size={24} className="animate-pulse" />
                                 <span>Good Health has no limits</span>
                             </div>
 
@@ -111,10 +111,11 @@ const Home = () => {
             <DoctorsSection />
             <ServicesSection />
             <FacilitiesSection />
-            <EmergencySection />
-            <AppointmentSection />
-            <ContactSection />
+            {/* <EmergencySection /> */}
+            {/* <AppointmentSection /> */}
+            {/* <ContactSection /> */}
             <AddressBar />
+
         </div>
     );
 };

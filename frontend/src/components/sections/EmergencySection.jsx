@@ -63,12 +63,12 @@ const EmergencySection = () => {
                         </div>
 
                         <div className="flex flex-wrap gap-4">
-                            <button className="bg-primary hover:bg-secondary text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-primary/20 transition-all flex items-center gap-3 active:scale-95">
-                                <Phone size={24} /> 1800 5533 3355
-                            </button>
-                            <button className="bg-white border-2 border-secondary text-secondary hover:bg-secondary/5 px-10 py-5 rounded-2xl text-lg font-bold transition-all">
-                                Call Hospital
-                            </button>
+                            <a 
+                                href="tel:180055333355" 
+                                className="bg-primary hover:bg-secondary text-white px-12 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-primary/20 transition-all flex items-center gap-3 active:scale-95"
+                            >
+                                <Phone size={24} /> Call Hospital
+                            </a>
                         </div>
                     </motion.div>
 

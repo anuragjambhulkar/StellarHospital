@@ -17,7 +17,7 @@ const Footer = () => {
                         <div className="space-y-4">
                             <h3 className="font-bold text-lg mb-4 text-secondary uppercase tracking-widest text-xs">Services</h3>
                             <a href="#emergency" className="block text-blue-50 hover:text-secondary transition-colors">Emergency</a>
-                            <a href="#services" className="block text-blue-50 hover:text-secondary transition-colors">Medical Services</a>
+                            <a href="#careers" className="block text-blue-50 hover:text-secondary transition-colors">Careers</a>
                             <a href="#facilities" className="block text-blue-50 hover:text-secondary transition-colors">Facilities</a>
                         </div>
                         <div className="space-y-4">
