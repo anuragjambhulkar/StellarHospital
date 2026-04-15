@@ -16,7 +16,7 @@ const ContactSection = () => {
                         className="space-y-12"
                     >
                         <div>
-                            <span className="bg-secondary/10 text-secondary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Get In Touch</span>
+                            <span className="bg-secondary/10 text-secondary px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block">Get In Touch</span>
                             <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-8 leading-[1.1]">
                                 We're here to help you on <br />
                                 <span className="text-secondary">your healthcare journey</span>
@@ -115,3 +115,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+

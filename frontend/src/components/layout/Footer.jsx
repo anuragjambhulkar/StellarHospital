@@ -15,13 +15,13 @@ const Footer = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-12">
                         <div className="space-y-4">
-                            <h3 className="font-bold text-lg mb-4 text-secondary uppercase tracking-widest text-xs">Services</h3>
+                            <h3 className="font-bold text-lg mb-4 text-secondary uppercase tracking-widest text-sm">Services</h3>
                             <a href="#emergency" className="block text-blue-50 hover:text-secondary transition-colors">Emergency</a>
                             <a href="#careers" className="block text-blue-50 hover:text-secondary transition-colors">Careers</a>
                             <a href="#facilities" className="block text-blue-50 hover:text-secondary transition-colors">Facilities</a>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="font-bold text-lg mb-4 text-secondary uppercase tracking-widest text-xs">Organization</h3>
+                            <h3 className="font-bold text-lg mb-4 text-secondary uppercase tracking-widest text-sm">Organization</h3>
                             <a href="#stellar-story" className="block text-blue-50 hover:text-secondary transition-colors">Our Story</a>
                             <a href="#doctors" className="block text-blue-50 hover:text-secondary transition-colors">Specialists</a>
                             <a href="#contact" className="block text-blue-50 hover:text-secondary transition-colors">Contact Us</a>
@@ -43,3 +43,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

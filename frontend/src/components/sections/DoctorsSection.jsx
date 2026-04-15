@@ -123,17 +123,17 @@ const DoctorCard = ({ doctor }) => {
                     />
                 </div>
                 <div className="space-y-2">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-secondary bg-secondary/5 px-3 py-1 rounded-lg">
+                    <span className="text-[11px] font-bold uppercase tracking-widest text-secondary bg-secondary/5 px-3 py-1 rounded-lg">
                         {doctor.specialty}
                     </span>
                     <h4 className="text-xl font-bold text-dark">{doctor.name}</h4>
-                    <p className="text-[11px] text-gray-500 line-clamp-2 leading-relaxed">{doctor.qualification}</p>
+                    <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed">{doctor.qualification}</p>
                 </div>
             </div>
 
             <div className="px-6 py-4 bg-accent/20 rounded-[2.5rem] mb-4 space-y-4">
                 <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Availability</span>
+                    <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Availability</span>
                     <div className="flex gap-2">
                         <button className="text-gray-400 hover:text-primary"><ChevronLeft size={16} /></button>
                         <button className="text-gray-400 hover:text-primary"><ChevronRight size={16} /></button>
@@ -166,22 +166,22 @@ const DoctorCard = ({ doctor }) => {
                         >
                             <div className="space-y-4">
                                 <section>
-                                    <h5 className="flex items-center gap-2 text-xs font-bold text-primary mb-2 uppercase tracking-wide">
+                                    <h5 className="flex items-center gap-2 text-sm font-bold text-primary mb-2 uppercase tracking-wide">
                                         <Briefcase size={14} className="text-secondary" /> Work Experience
                                     </h5>
                                     <ul className="space-y-2">
                                         {doctor.details.experience.map((ex, i) => (
-                                            <li key={i} className="text-xs text-gray-600 leading-relaxed">• {ex}</li>
+                                            <li key={i} className="text-sm text-gray-600 leading-relaxed">• {ex}</li>
                                         ))}
                                     </ul>
                                 </section>
                                 <section>
-                                    <h5 className="flex items-center gap-2 text-xs font-bold text-primary mb-2 uppercase tracking-wide">
+                                    <h5 className="flex items-center gap-2 text-sm font-bold text-primary mb-2 uppercase tracking-wide">
                                         <GraduationCap size={14} className="text-secondary" /> Education
                                     </h5>
                                     <ul className="space-y-2">
                                         {doctor.details.education.map((ed, i) => (
-                                            <li key={i} className="text-xs text-gray-600 leading-relaxed">• {ed}</li>
+                                            <li key={i} className="text-sm text-gray-600 leading-relaxed">• {ed}</li>
                                         ))}
                                     </ul>
                                 </section>
@@ -216,7 +216,7 @@ const DoctorsSection = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <div className="max-w-xl">
-                        {/* <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Care Beyond Boundaries</span> */}
+                        {/* <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-4 inline-block">Care Beyond Boundaries</span> */}
                         <h2 className="font-display text-5xl md:text-6xl font-bold text-primary">Meet Our Experts <br /></h2>
                     </div>
 
@@ -252,3 +252,4 @@ const DoctorsSection = () => {
 };
 
 export default DoctorsSection;
+

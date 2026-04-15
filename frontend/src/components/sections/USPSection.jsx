@@ -24,7 +24,7 @@ const USPSection = () => {
                         className="space-y-10"
                     >
                         <div>
-                            <span className="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Your Partners in Good Health</span>
+                            <span className="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block">Your Partners in Good Health</span>
                             <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-8 leading-[1.1]">
                                 Comprehensive Integrative <br />
                                 <span className="text-dark">& Compassionate Care</span>
@@ -91,3 +91,4 @@ const USPSection = () => {
 };
 
 export default USPSection;
+

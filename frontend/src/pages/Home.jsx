@@ -24,12 +24,10 @@ const Home = () => {
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0 overflow-hidden flex items-start justify-start">
                     <img
-                        src="./assets/hero_bg.png"
+                        src="/StellarHospital/assets/hero_bg.png"
                         alt="Stellar Health Interior"
                         className="h-[120%] w-[120%] lg:w-[110%] max-w-none object-cover origin-top-left transform -translate-x-[25%] -translate-y-[-11%] opacity-100"
                     />
-                    <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/50 to-transparent" />
                 </div>
 
                 {/* Content */}
@@ -55,9 +53,12 @@ const Home = () => {
                             </h1>
 
                             {/* Download App Redesign */}
-                            <button className="flex items-center gap-3 bg-gradient-to-br from-primary to-primary/80 hover:to-primary text-white px-8 py-3.5 rounded-[24px] text-[10px] font-black uppercase tracking-[0.2em] shadow-2xl shadow-primary/40 transition-all hover:scale-105 active:scale-95 group mt-4">
-                                Download App
-                                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                            <button className="relative overflow-hidden flex items-center justify-center gap-4 bg-gradient-to-br from-primary to-primary/90 text-white px-12 sm:px-16 py-5 sm:py-6 rounded-[2rem] hover:rounded-[3rem] text-sm sm:text-base font-black uppercase tracking-[0.2em] shadow-[0_10px_40px_rgba(var(--color-primary,0,0,0),0.4)] shadow-primary/40 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(var(--color-primary,0,0,0),0.6)] hover:shadow-primary/60 hover:-translate-y-2 hover:scale-[1.02] active:scale-95 group mt-8 w-full sm:w-auto border border-white/20">
+                                <span className="absolute inset-0 bg-white/20 -translate-x-[150%] skew-x-[-30deg] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out"></span>
+                                <span className="relative z-10 flex items-center gap-4">
+                                    Download App
+                                    <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform duration-300" />
+                                </span>
                             </button>
                             {/* Sub-headline
                             <p className="text-lg md:text-xl text-dark/70 max-w-2xl font-medium leading-relaxed">
@@ -96,7 +97,7 @@ const Home = () => {
                                     className="flex flex-col items-center md:items-start md:px-10 first:pl-0"
                                 >
                                     <div className="text-4xl lg:text-5xl font-display font-bold mb-1 tracking-tight">{stat.value}</div>
-                                    <div className="text-white/60 font-black tracking-[0.2em] uppercase text-[9px] lg:text-[10px]">{stat.label}</div>
+                                    <div className="text-white/60 font-black tracking-[0.2em] uppercase text-[10px] lg:text-[11px]">{stat.label}</div>
                                 </motion.div>
                             ))}
                         </div>
@@ -123,3 +124,4 @@ const Home = () => {
 
 
 export default Home;
+

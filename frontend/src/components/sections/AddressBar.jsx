@@ -24,7 +24,7 @@ const AddressBar = () => {
                             </div>
                             <div className="space-y-3">
                                 <h4 className="font-bold text-sm text-white uppercase tracking-wider">Location</h4>
-                                <address className="text-blue-50 text-xs not-italic leading-relaxed">
+                                <address className="text-blue-50 text-sm not-italic leading-relaxed">
                                     30, Gurudev Nagar,<br />
                                     Nandanwan, Nagpur,<br />
                                     Maharashtra, India.
@@ -39,7 +39,7 @@ const AddressBar = () => {
                             </div>
                             <div className="space-y-3">
                                 <h4 className="font-bold text-sm text-white uppercase tracking-wider">Contact</h4>
-                                <div className="text-blue-50 text-xs space-y-2">
+                                <div className="text-blue-50 text-sm space-y-2">
                                     <p className="flex items-center gap-2">info@stellarhospital.com</p>
                                     <p className="flex items-center gap-2 font-bold text-secondary">1-833-213-6353</p>
                                 </div>
@@ -53,7 +53,7 @@ const AddressBar = () => {
                             </div>
                             <div className="space-y-3">
                                 <h4 className="font-bold text-sm text-white uppercase tracking-wider">Careers</h4>
-                                <div className="flex flex-col gap-2 text-xs text-blue-50">
+                                <div className="flex flex-col gap-2 text-sm text-blue-50">
                                     <a href="#careers" className="hover:text-secondary transition-colors">Job Openings</a>
                                     <a href="#internships" className="hover:text-secondary transition-colors">Internships</a>
                                     <a href="#working-at-stellar" className="hover:text-secondary transition-colors">Working at Stellar</a>
@@ -68,7 +68,7 @@ const AddressBar = () => {
                             </div>
                             <div className="space-y-3">
                                 <h4 className="font-bold text-sm text-white uppercase tracking-wider">Help</h4>
-                                <div className="flex flex-col gap-2 text-xs text-blue-50">
+                                <div className="flex flex-col gap-2 text-sm text-blue-50">
                                     <a href="#stellar-story" className="hover:text-secondary transition-colors">Our Story</a>
                                     <a href="#doctors" className="hover:text-secondary transition-colors">Specialists</a>
                                     <a href="#contact" className="hover:text-secondary transition-colors">Contact Us</a>
@@ -91,3 +91,4 @@ const AddressBar = () => {
 };
 
 export default AddressBar;
+

@@ -16,7 +16,7 @@ const StellarStory = () => {
                 <div className="absolute bottom-12 left-0 right-0">
                     <div className="container mx-auto px-6">
                         <div className="max-w-3xl">
-                            <span className="bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Our Legacy</span>
+                            <span className="bg-primary text-white px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block">Our Legacy</span>
                             <h2 className="font-display text-5xl md:text-7xl font-bold text-primary mb-2"></h2>
                         </div>
                     </div>
@@ -29,3 +29,4 @@ const StellarStory = () => {
 
 
 export default StellarStory;
+

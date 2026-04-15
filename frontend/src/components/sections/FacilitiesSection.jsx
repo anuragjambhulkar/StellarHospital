@@ -23,7 +23,7 @@ const FacilitiesSection = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <div className="max-w-2xl">
-                        {/* <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Modern Technology, Compassionate Care</span> */}
+                        {/* <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-4 inline-block">Modern Technology, Compassionate Care</span> */}
                         <h2 className="font-display text-5xl md:text-6xl font-bold text-primary">World-Class Facilities <br /><span className="text-dark">Tailored for Your Care</span></h2>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const FacilitiesSection = () => {
                                     {React.cloneElement(fac.icon, { size: 20 })}
                                 </div>
                                 <h4 className="text-xl font-bold text-white mb-1 tracking-tight">{fac.title}</h4>
-                                <p className="text-[10px] font-bold text-secondary tracking-widest uppercase">{fac.tags}</p>
+                                <p className="text-[11px] font-bold text-secondary tracking-widest uppercase">{fac.tags}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -56,3 +56,4 @@ const FacilitiesSection = () => {
 };
 
 export default FacilitiesSection;
+

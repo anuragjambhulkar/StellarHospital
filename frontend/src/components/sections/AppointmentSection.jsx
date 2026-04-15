@@ -36,7 +36,7 @@ const AppointmentSection = () => {
                     {/* Left Side: Content */}
                     <div className="lg:col-span-5 space-y-8">
                         <div>
-                            <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Seamless Experience</span>
+                            <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block">Seamless Experience</span>
                             <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-8 leading-[1.1]">
                                 Experience Efficient & <br />
                                 <span className="text-dark">Personalized Care.</span>
@@ -76,7 +76,7 @@ const AppointmentSection = () => {
                             <form className="space-y-8">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Patient's Name</label>
+                                        <label className="text-sm font-bold uppercase tracking-widest text-gray-400 pl-4">Patient's Name</label>
                                         <div className="relative">
                                             <User className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                                             <input
@@ -89,7 +89,7 @@ const AppointmentSection = () => {
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Age</label>
+                                            <label className="text-sm font-bold uppercase tracking-widest text-gray-400 pl-4">Age</label>
                                             <input
                                                 type="number"
                                                 className="w-full bg-white border-none rounded-2xl py-4 px-6 text-dark placeholder:text-gray-400/70 placeholder:font-medium focus:ring-2 focus:ring-primary/20 outline-none shadow-sm font-medium"
@@ -98,7 +98,7 @@ const AppointmentSection = () => {
                                             />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Sex</label>
+                                            <label className="text-sm font-bold uppercase tracking-widest text-gray-400 pl-4">Sex</label>
                                             <select
                                                 name="sex"
                                                 value={formData.sex}
@@ -117,7 +117,7 @@ const AppointmentSection = () => {
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Preferred Date</label>
+                                        <label className="text-sm font-bold uppercase tracking-widest text-gray-400 pl-4">Preferred Date</label>
                                         <div className="relative">
                                             <Calendar className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                                             <select
@@ -135,7 +135,7 @@ const AppointmentSection = () => {
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Preferred Time</label>
+                                        <label className="text-sm font-bold uppercase tracking-widest text-gray-400 pl-4">Preferred Time</label>
                                         <div className="relative">
                                             <Clock className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                                             <select
@@ -156,7 +156,7 @@ const AppointmentSection = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase tracking-widest text-gray-400 pl-4">Treatment Details</label>
+                                    <label className="text-sm font-bold uppercase tracking-widest text-gray-400 pl-4">Treatment Details</label>
                                     <div className="relative">
                                         <ClipboardList className="absolute left-6 top-6 text-gray-400" size={18} />
                                         <textarea
@@ -180,3 +180,4 @@ const AppointmentSection = () => {
 };
 
 export default AppointmentSection;
+

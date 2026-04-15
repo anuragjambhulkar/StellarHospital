@@ -114,7 +114,7 @@ const SubscriptionPlans = () => {
                                                         className="bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 text-white px-5 pt-3 pb-6 shadow-[0_10px_20px_rgba(234,179,8,0.4)]"
                                                         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)", WebkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)" }}
                                                     >
-                                                        <span className="block text-[9px] font-black uppercase tracking-[0.2em] pt-1 whitespace-nowrap">
+                                                        <span className="block text-[10px] font-black uppercase tracking-[0.2em] pt-1 whitespace-nowrap">
                                                             Most Popular
                                                         </span>
                                                     </motion.div>
@@ -125,7 +125,7 @@ const SubscriptionPlans = () => {
                                                 <h3 className={`text-2xl font-display font-bold mb-1 ${plan.headerClass}`}>{plan.name}</h3>
                                                 <div className="flex items-baseline justify-center gap-1">
                                                     <span className="text-3xl font-bold">{plan.price}</span>
-                                                    <span className={`text-xs ${idx === 2 ? 'opacity-80' : 'text-gray-500'}`}>{plan.period}</span>
+                                                    <span className={`text-sm ${idx === 2 ? 'opacity-80' : 'text-gray-500'}`}>{plan.period}</span>
                                                 </div>
                                             </div>
                                         </th>
@@ -180,3 +180,4 @@ const SubscriptionPlans = () => {
 };
 
 export default SubscriptionPlans;
+

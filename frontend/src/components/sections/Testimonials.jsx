@@ -33,7 +33,7 @@ const Testimonials = () => {
         <section className="py-24 bg-accent/20 relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    {/* <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 inline-block">Patient Stories</span> */}
+                    {/* <span className="bg-primary/5 text-primary px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-4 inline-block">Patient Stories</span> */}
                     <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4">Hear From Our Patients</h2>
                 </div>
 
@@ -88,7 +88,7 @@ const Testimonials = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <h4 className="font-bold text-dark text-lg whitespace-normal">{t.name}</h4>
-                                        <p className="text-xs font-medium text-secondary tracking-wide whitespace-normal">{t.role}</p>
+                                        <p className="text-sm font-medium text-secondary tracking-wide whitespace-normal">{t.role}</p>
                                     </div>
                                 </div>
                             </div>
@@ -101,3 +101,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+

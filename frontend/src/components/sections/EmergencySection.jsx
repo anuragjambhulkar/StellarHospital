@@ -16,7 +16,7 @@ const EmergencySection = () => {
                         className="space-y-10"
                     >
                         <div>
-                            <span className="bg-secondary/10 text-secondary px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">24/7 Priority Emergency Care</span>
+                            <span className="bg-secondary/10 text-secondary px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block">24/7 Priority Emergency Care</span>
                             <h2 className="font-display text-5xl md:text-6xl font-bold text-primary mb-8 leading-[1.1]">
                                 Immediate Medical <br />
                                 <span className="text-secondary underline decoration-primary/20 decoration-4 underline-offset-8">Attention, Anytime.</span>
@@ -83,16 +83,16 @@ const EmergencySection = () => {
                         <h3 className="text-3xl font-bold mb-10">Quick Emergency Registration</h3>
                         <form className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-widest text-secondary">Patient's Name</label>
+                                <label className="text-sm font-bold uppercase tracking-widest text-secondary">Patient's Name</label>
                                 <input type="text" className="w-full bg-white/10 border-none rounded-2xl py-4 px-6 text-white placeholder:text-secondary/50 focus:ring-2 focus:ring-secondary/50 outline-none" placeholder="Enter Full Name" />
                             </div>
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase tracking-widest text-secondary">Age</label>
+                                    <label className="text-sm font-bold uppercase tracking-widest text-secondary">Age</label>
                                     <input type="number" className="w-full bg-white/10 border-none rounded-2xl py-4 px-6 text-white placeholder:text-secondary/50 focus:ring-2 focus:ring-secondary/50 outline-none" placeholder="Age" />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold uppercase tracking-widest text-secondary">Sex</label>
+                                    <label className="text-sm font-bold uppercase tracking-widest text-secondary">Sex</label>
                                     <select className="w-full bg-white/10 border-none rounded-2xl py-4 px-6 text-white appearance-none focus:ring-2 focus:ring-secondary/50 outline-none">
                                         <option className="bg-primary">Male</option>
                                         <option className="bg-primary">Female</option>
@@ -101,7 +101,7 @@ const EmergencySection = () => {
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs font-bold uppercase tracking-widest text-secondary">Condition Overview</label>
+                                <label className="text-sm font-bold uppercase tracking-widest text-secondary">Condition Overview</label>
                                 <textarea className="w-full bg-white/10 border-none rounded-2xl py-4 px-6 text-white placeholder:text-secondary/50 focus:ring-2 focus:ring-secondary/50 outline-none min-h-[120px]" placeholder="Briefly describe the emergency..."></textarea>
                             </div>
                             <button type="submit" className="w-full bg-secondary hover:bg-white hover:text-primary py-5 rounded-2xl text-lg font-bold transition-all flex items-center justify-center gap-3 mt-4">
@@ -116,3 +116,4 @@ const EmergencySection = () => {
 };
 
 export default EmergencySection;
+

@@ -63,7 +63,7 @@ const Header = () => {
     ];
 
     return (
-        <>
+        <>rfedcxzfafasffdfsafdsssssxcafwesdcxz  cv x
             <header
                 className={`fixed top-0 left-0 right-0 z-50 pointer-events-none transition-transform duration-500 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
             >
@@ -113,7 +113,7 @@ const Header = () => {
                                             scrollToSection(link.id);
                                         }
                                     }}
-                                    className={`relative z-10 px-5 py-2.5 text-[11px] font-black transition-colors duration-300 uppercase tracking-widest ${hoveredLink === link.id ? 'text-white' : 'text-slate-600'}`}
+                                    className={`relative z-10 px-6 py-3 text-base font-black transition-colors duration-300 uppercase tracking-[0.10em] ${hoveredLink === link.id ? 'text-white' : 'text-slate-600'}`}
                                 >
                                     {/* THE "TRANSACTION" SLIDING PILL */}
                                     {hoveredLink === link.id && (
@@ -140,7 +140,7 @@ const Header = () => {
                             {/* Emergency Glass Card */}
                             <button
                                 onClick={() => setEmergencyPopupOpen(true)}
-                                className={`hidden lg:flex items-center gap-3 px-7 py-3 rounded-[24px] text-[10px] font-black uppercase tracking-[0.15em] transition-all duration-500 border shadow-2xl group relative overflow-hidden ${scrolled ? 'bg-secondary text-primary border-primary/10' : 'bg-white/90 text-primary border-primary/5'}`}
+                                className={`hidden lg:flex items-center gap-3 px-8 py-3.5 rounded-[24px] text-xs font-black uppercase tracking-[0.15em] transition-all duration-500 border shadow-2xl group relative overflow-hidden ${scrolled ? 'bg-secondary text-primary border-primary/10' : 'bg-white/90 text-primary border-primary/5'}`}
                             >
                                 <span className="relative flex h-2 w-2">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
@@ -185,7 +185,7 @@ const Header = () => {
                                     }}
                                     className="px-6 py-5 text-left font-bold text-primary bg-gray-50/50 rounded-2xl flex items-center justify-between group"
                                 >
-                                    <span className="text-xs uppercase tracking-widest">{link.name}</span>
+                                    <span className="text-base uppercase tracking-widest">{link.name}</span>
                                     <ArrowRight size={14} />
                                 </button>
                             ))}
@@ -232,3 +232,4 @@ const Header = () => {
 };
 
 export default Header;
+
